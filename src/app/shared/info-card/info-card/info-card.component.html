@@ -1,0 +1,9 @@
+<div *ngFor="let card of cards" class=" lg:w-1/6 md:w-full sm:w-full lg:flex m-2">
+    <div class="border border-primary bg-white rounded-b flex flex-col justify-between leading-normal">
+        <div>
+            <div class="bg-primary text-gray-100 font-bold text-xl p-2 uppercase">{{card.title}}</div>
+            <p class="text-gray-700 text-base p-3" [innerHTML]="card.text">
+            </p>
+        </div>
+    </div>
+</div>

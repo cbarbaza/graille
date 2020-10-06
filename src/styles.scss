@@ -2,3 +2,28 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+html, body {
+    height: 100%;
+}
+
+
+/**
+* COLOR
+*/
+$primary: #c29a6a;
+
+.bg-primary {
+    background-color: $primary;
+}
+
+.border-primary{
+    border-color: $primary;
+}
+
+
+
+h2 {
+    font-weight: 700;
+    font-size: 2em;
+}
