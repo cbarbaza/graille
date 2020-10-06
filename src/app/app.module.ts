@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing/landing.component';
-import { InfoCardComponent } from './shared/info-card/info-card/info-card.component';
+import { InfoCardComponent } from './landing/landing/info-card/info-card.component';
 
 @NgModule({
   declarations: [
