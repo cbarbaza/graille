@@ -9,6 +9,14 @@ export class LandingComponent implements OnInit {
 
   constructor() { }
 
+
+  public slides = [
+    { src: "450886047" },
+    { src: "450886047" },
+    { src: "450886047" },
+    { src: "450886047" }
+  ];
+
   ngOnInit() {
   }
 

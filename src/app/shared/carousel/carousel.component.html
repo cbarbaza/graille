@@ -1,0 +1,22 @@
+<!-- carousel -->
+<div class="carousel">
+    <div class="p-2 flex flex-row justify-between bg-primary">
+        <button class="control prev" (click)="onPreviousClick()">
+            <span class="arrow left"></span>
+        </button>
+        <h5 @carouselAnimation>Title</h5>
+        <button class="control next" (click)="onNextClick()">
+            <span class="arrow right"></span>
+        </button>
+    </div>
+
+    <ng-container *ngFor="let slide of slides; let i = index">
+        <div *ngIf="i === currentSlide" class="slide m-2" @carouselAnimation style="padding:56.25% 0 0 0;">
+            <iframe src="https://player.vimeo.com/video/450886047?title=0&byline=0&portrait=0"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <!-- <img *ngIf="i === currentSlide" [src]="slide.src" class="slide" @carouselAnimation /> -->
+    </ng-container>
+</div>
