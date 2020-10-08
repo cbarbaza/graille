@@ -7,6 +7,7 @@ import { LandingComponent } from './landing/landing/landing.component';
 import { InfoCardComponent } from './landing/landing/info-card/info-card.component';
 import { TopMenuComponent } from './shared/top-menu/top-menu.component';
 import { ActualiteComponent } from './actualite/actualite.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
