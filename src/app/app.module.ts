@@ -8,6 +8,7 @@ import { InfoCardComponent } from './landing/landing/info-card/info-card.compone
 import { TopMenuComponent } from './shared/top-menu/top-menu.component';
 import { ActualiteComponent } from './actualite/actualite.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { PartnerCardComponent } from './landing/landing/partner-card/partner-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     InfoCardComponent,
     FooterComponent,
     TopMenuComponent,
-    ActualiteComponent
+    ActualiteComponent,
+    PartnerCardComponent
   ],
   imports: [
     BrowserModule,
