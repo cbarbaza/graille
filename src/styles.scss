@@ -18,18 +18,23 @@ a, a:hover, a:visited {
 */
 $primary: #c29a6a;
 
-.bg-primary {
-    background-color: $primary;
-}
+@layer utilities {
+    @variants hover, focus {
+        $primary: #c29a6a;
 
-.border-primary{
-    border-color: $primary;
-}
+        .bg-primary {
+            background-color: $primary;
+        }
 
-.text-primary {
-    color: $primary;
-}
+        .border-primary{
+            border-color: $primary;
+        }
 
+        .text-primary {
+            color: $primary;
+        }
+    }
+}
 
 
 h2 {
