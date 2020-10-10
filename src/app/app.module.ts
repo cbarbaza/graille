@@ -9,6 +9,8 @@ import { TopMenuComponent } from './shared/top-menu/top-menu.component';
 import { ActualiteComponent } from './actualite/actualite.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { PartnerCardComponent } from './landing/landing/partner-card/partner-card.component';
+import { VimeoComponent } from './shared/vimeo/vimeo.component';
+import { VimeoItemComponent } from './actualite/vimeo-item/vimeo-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { PartnerCardComponent } from './landing/landing/partner-card/partner-car
     FooterComponent,
     TopMenuComponent,
     ActualiteComponent,
-    PartnerCardComponent
+    PartnerCardComponent,
+    VimeoComponent,
+    VimeoItemComponent
   ],
   imports: [
     BrowserModule,
