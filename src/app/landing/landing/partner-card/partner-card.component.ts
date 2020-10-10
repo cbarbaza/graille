@@ -10,9 +10,9 @@ import { IPartnerCard, partners } from 'src/app/data/partner-card.interface';
 export class PartnerCardComponent implements OnInit {
 
   constructor(private sanitizer: DomSanitizer) { }
+  private static PATH_PARTNER_LOGO = 'assets/images/partner-logo/';
 
   public partners: IPartnerCard[] = partners;
-  private static PATH_PARTNER_LOGO: string = "assets/images/partner-logo/";
 
   ngOnInit() {
   }

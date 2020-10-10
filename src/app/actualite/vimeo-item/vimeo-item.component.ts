@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class VimeoItemComponent implements OnInit {
 
   @Input()
-  public direction: string; //should be left ort right
+  public direction: string; // should be left ort right
 
   @Input()
   public viemoId: string;
@@ -20,12 +20,12 @@ export class VimeoItemComponent implements OnInit {
   public title: string;
 
   @Input()
-  public text: string = "";
+  public text = '';
 
   constructor() { }
 
   ngOnInit() {
-    console.log(this.direction)
+    console.log(this.direction);
   }
 
 }
