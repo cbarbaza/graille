@@ -17,18 +17,17 @@ export const partners: IPartnerCard[] = [
         description: 'Pain bio au levain naturel',
         links: [
             {
+                iconName: 'fas fa-link',
+                url: 'https://paumedepain.fr/'
+            },
+            {
                 iconName: 'fab fa-facebook-square',
                 url: 'https://www.instagram.com/boulangerie_paumedepain/'
             },
             {
-                iconName: 'fas fa-link',
-                url: 'https://paumedepain.fr/'
-            },
-
-            {
                 iconName: ' fab fa-instagram-square',
                 url: 'https://www.instagram.com/boulangerie_paumedepain/'
-            },
+            }
         ]
     },
     {
@@ -45,12 +44,12 @@ export const partners: IPartnerCard[] = [
                 url: 'https://www.facebook.com/agrizfr/'
             },
             {
-                iconName: 'fab fa-linkedin',
-                url: 'https://www.linkedin.com/company/agriz/'
-            },
-            {
                 iconName: 'fab fa-instagram-square',
                 url: 'https://www.instagram.com/agrizfr/'
+            },
+            {
+                iconName: 'fab fa-linkedin',
+                url: 'https://www.linkedin.com/company/agriz/'
             },
         ]
     },
@@ -146,6 +145,29 @@ export const partners: IPartnerCard[] = [
             {
                 iconName: 'fab fa-linkedin',
                 url: 'https://www.linkedin.com/company/les-alchimistes-lyon/'
+            }
+        ]
+    },
+    {
+        logo: 'logo-day-by-day.png',
+        name: 'Day by Day',
+        description: 'Mon épicerie en vrac ',
+        links: [
+            {
+                iconName: 'fas fa-link',
+                url: 'https://daybyday-shop.com/'
+            },
+            {
+                iconName: 'fab fa-facebook-square',
+                url: 'https://www.facebook.com/magasinsdaybyday/'
+            },
+            {
+                iconName: 'fab fa-instagram-square',
+                url: 'https://www.instagram.com/day_by_day_vrac_shop/'
+            },
+            {
+                iconName: 'fab fa-linkedin',
+                url: 'https://www.linkedin.com/company/day-by-day/?originalSubdomain=fr'
             }
         ]
     },
