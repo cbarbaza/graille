@@ -1,0 +1,2 @@
+# Let's Encrypt renewal
+05 5 * * * certbot renew --renew-hook "systemctl reload nginx"
