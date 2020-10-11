@@ -11,6 +11,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { PartnerCardComponent } from './landing/landing/partner-card/partner-card.component';
 import { VimeoComponent } from './shared/vimeo/vimeo.component';
 import { VimeoItemComponent } from './actualite/vimeo-item/vimeo-item.component';
+import { PhotoItemComponent } from './actualite/photo-item/photo-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { VimeoItemComponent } from './actualite/vimeo-item/vimeo-item.component'
     ActualiteComponent,
     PartnerCardComponent,
     VimeoComponent,
-    VimeoItemComponent
+    VimeoItemComponent,
+    PhotoItemComponent
   ],
   imports: [
     BrowserModule,

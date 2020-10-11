@@ -25,7 +25,6 @@ export class VimeoItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.direction);
   }
 
 }

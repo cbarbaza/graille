@@ -10,9 +10,10 @@
                 </div>
             </div>
             <div class="text-gray-600">
-                <app-vimeo [vimeoId]="viemoId"></app-vimeo>
+                <img [src]="getImage()" [alt]="title">
             </div>
         </div>
+
     </div>
     <!--line column-->
     <div class="w-1/5  flex justify-center">
@@ -50,7 +51,7 @@
                     <p class="text-sm text-gray-500" [innerHTML]="text"></p>
                 </div>
             </div>
-            <app-vimeo [vimeoId]="viemoId"></app-vimeo>
+            <img [src]="getImage()" [alt]="title">
         </div>
     </div>
 </div>
