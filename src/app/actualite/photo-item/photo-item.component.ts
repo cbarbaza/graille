@@ -24,6 +24,9 @@ export class PhotoItemComponent implements OnInit {
   @Input()
   public text = '';
 
+  @Input()
+  public slug = '';
+
   constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {

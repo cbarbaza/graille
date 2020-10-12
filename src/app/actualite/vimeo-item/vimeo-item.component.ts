@@ -22,6 +22,9 @@ export class VimeoItemComponent implements OnInit {
   @Input()
   public text = '';
 
+  @Input()
+  public slug = '';
+
   constructor() { }
 
   ngOnInit() {
