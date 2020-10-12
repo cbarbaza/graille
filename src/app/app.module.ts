@@ -12,6 +12,8 @@ import { PartnerCardComponent } from './landing/landing/partner-card/partner-car
 import { VimeoComponent } from './shared/vimeo/vimeo.component';
 import { VimeoItemComponent } from './actualite/vimeo-item/vimeo-item.component';
 import { PhotoItemComponent } from './actualite/photo-item/photo-item.component';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { PhotoItemComponent } from './actualite/photo-item/photo-item.component'
   ],
   imports: [
     BrowserModule,
+    NgxGoogleAnalyticsModule.forRoot(environment.googleAnalyticsId),
+    NgxGoogleAnalyticsRouterModule,
     AppRoutingModule,
   ],
   providers: [],
