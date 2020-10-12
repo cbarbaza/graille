@@ -93,14 +93,18 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Infra : 
 
-### Deployment on DigitalOcean droplet. 
+### Deployment on DigitalOcean
+
+* OS : ubuntu
+* Server web : NGINX
+* Nginw config : external/nginx
 
 * Base package installed : 
 ```
-tree wget git vim nano telnet htop bind-utils dos2unix iotop curl zip unzip
+tree wget git vim nano telnet htop dos2unix iotop curl zip unzip
 ```
 
-* Maintenance utility :
+* Maintenance and secuirty utility :
 ```
 logrotate apticron debian-goodies 
 ```
@@ -110,8 +114,6 @@ logrotate apticron debian-goodies
 
 * Angular deployment : 
 https://medium.com/@balramchavan/deploy-angular-application-in-nginx-server-on-digitalocean-ubuntu-droplet-28380524811e
-
-
 
 
 ### Tools
