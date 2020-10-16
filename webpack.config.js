@@ -1,13 +1,12 @@
-var ImageminPlugin = require('imagemin-webpack-plugin').default;
-
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
   plugins: [
     new ImageminPlugin({
       pngquant: {
-        quality: '95-100'
-      }
-    })
+        quality: '95-100',
+      },
+    }),
   ],
   module: {
     rules: [
@@ -17,11 +16,7 @@ module.exports = {
         options: {
           ident: 'postcss',
           syntax: 'postcss-scss',
-          plugins: () => [
-            require('postcss-import'),
-            require('tailwindcss'),
-            require('autoprefixer'),
-          ],
+          plugins: () => [require('postcss-import'), require('tailwindcss'), require('autoprefixer')],
         },
       },
     ],
