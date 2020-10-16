@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-vimeo-item',
   templateUrl: './vimeo-item.component.html',
-  styleUrls: ['./vimeo-item.component.scss']
+  styleUrls: ['./vimeo-item.component.scss'],
 })
 export class VimeoItemComponent implements OnInit {
 

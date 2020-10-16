@@ -26,7 +26,7 @@ import { environment } from 'src/environments/environment';
     PartnerCardComponent,
     VimeoComponent,
     VimeoItemComponent,
-    PhotoItemComponent
+    PhotoItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +35,6 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

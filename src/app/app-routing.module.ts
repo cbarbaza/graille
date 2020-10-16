@@ -13,12 +13,12 @@ const routerOptions: ExtraOptions = {
 const routes: Routes = [
   { path: 'home', component: LandingComponent },
   { path: 'actualite', component: ActualiteComponent },
-  { path: '**', redirectTo: '/home' }
+  { path: '**', redirectTo: '/home' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, routerOptions)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
 

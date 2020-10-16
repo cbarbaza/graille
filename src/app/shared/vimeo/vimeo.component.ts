@@ -4,7 +4,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-vimeo',
   templateUrl: './vimeo.component.html',
-  styleUrls: ['./vimeo.component.scss']
+  styleUrls: ['./vimeo.component.scss'],
 })
 export class VimeoComponent implements OnInit {
 
