@@ -1,13 +1,16 @@
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
+const isProdution = process.env.NODE_ENV === 'production';
+
 module.exports = {
   plugins: [
-    new ImageminPlugin({
-      pngquant: {
-        quality: '95-100',
-      },
-    }),
-  ],
+    isProdution &&
+      new ImageminPlugin({
+        pngquant: {
+          quality: '95-100',
+        },
+      }),
+  ].filter((value) => !!value), // Removes falsy values from array
   module: {
     rules: [
       {
