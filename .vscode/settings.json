@@ -1,5 +1,14 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.tslint": true
+  "[typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.tslint": true
+    },
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.format": true
+    },
   },
 }
