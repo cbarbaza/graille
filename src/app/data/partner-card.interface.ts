@@ -18,17 +18,17 @@ export const partners: IPartnerCard[] = [
         links: [
             {
                 iconName: 'fas fa-link',
-                url: 'https://paumedepain.fr/'
+                url: 'https://paumedepain.fr/',
             },
             {
                 iconName: 'fab fa-facebook-square',
-                url: 'https://www.instagram.com/boulangerie_paumedepain/'
+                url: 'https://www.instagram.com/boulangerie_paumedepain/',
             },
             {
                 iconName: ' fab fa-instagram-square',
-                url: 'https://www.instagram.com/boulangerie_paumedepain/'
-            }
-        ]
+                url: 'https://www.instagram.com/boulangerie_paumedepain/',
+            },
+        ],
     },
     {
         logo: 'logo-agriz.jpg',
@@ -37,21 +37,21 @@ export const partners: IPartnerCard[] = [
         links: [
             {
                 iconName: 'fas fa-link',
-                url: 'https://www.agriz.fr/'
+                url: 'https://www.agriz.fr/',
             },
             {
                 iconName: 'fab fa-facebook-square',
-                url: 'https://www.facebook.com/agrizfr/'
+                url: 'https://www.facebook.com/agrizfr/',
             },
             {
                 iconName: 'fab fa-instagram-square',
-                url: 'https://www.instagram.com/agrizfr/'
+                url: 'https://www.instagram.com/agrizfr/',
             },
             {
                 iconName: 'fab fa-linkedin',
-                url: 'https://www.linkedin.com/company/agriz/'
+                url: 'https://www.linkedin.com/company/agriz/',
             },
-        ]
+        ],
     },
     {
         logo: 'latelier-du-caillou.jpg',
@@ -60,17 +60,17 @@ export const partners: IPartnerCard[] = [
         links: [
             {
                 iconName: 'fas fa-link',
-                url: 'https://latelierducaillou.fr/'
+                url: 'https://latelierducaillou.fr/',
             },
             {
                 iconName: 'fab fa-facebook-square',
-                url: 'https://www.facebook.com/atelierducaillou'
+                url: 'https://www.facebook.com/atelierducaillou',
             },
             {
                 iconName: 'fab fa-instagram-square',
-                url: 'https://www.instagram.com/latelierducaillou/'
+                url: 'https://www.instagram.com/latelierducaillou/',
             },
-        ]
+        ],
     },
     {
         logo: 'logo-eldoradoz.png',
@@ -79,9 +79,9 @@ export const partners: IPartnerCard[] = [
         links: [
             {
                 iconName: 'fab fa-facebook-square',
-                url: 'https://www.facebook.com/EpicerievracLyon9/'
+                url: 'https://www.facebook.com/EpicerievracLyon9/',
             },
-        ]
+        ],
     },
     {
         logo: 'logo-alasource.png',
@@ -90,17 +90,17 @@ export const partners: IPartnerCard[] = [
         links: [
             {
                 iconName: 'fas fa-link',
-                url: 'https://www.alasource-lyon.com/'
+                url: 'https://www.alasource-lyon.com/',
             },
             {
                 iconName: 'fab fa-facebook-square',
-                url: 'https://www.facebook.com/epicerielocavorezerodechet/'
+                url: 'https://www.facebook.com/epicerielocavorezerodechet/',
             },
             {
                 iconName: 'fab fa-instagram-square',
-                url: 'https://www.instagram.com/alasource_lyon/'
-            }
-        ]
+                url: 'https://www.instagram.com/alasource_lyon/',
+            },
+        ],
     },
     {
         logo: 'logo-les-alchimistesa.jpg',
@@ -109,21 +109,21 @@ export const partners: IPartnerCard[] = [
         links: [
             {
                 iconName: 'fas fa-link',
-                url: 'https://alchimistes.co/compost-lyon/'
+                url: 'https://alchimistes.co/compost-lyon/',
             },
             {
                 iconName: 'fab fa-facebook-square',
-                url: 'https://www.facebook.com/LesAlchimistesLyon/'
+                url: 'https://www.facebook.com/LesAlchimistesLyon/',
             },
             {
                 iconName: 'fab fa-instagram-square',
-                url: 'https://www.instagram.com/les_alchimistes_compost/'
+                url: 'https://www.instagram.com/les_alchimistes_compost/',
             },
             {
                 iconName: 'fab fa-linkedin',
-                url: 'https://www.linkedin.com/company/les-alchimistes-lyon/'
-            }
-        ]
+                url: 'https://www.linkedin.com/company/les-alchimistes-lyon/',
+            },
+        ],
     },
     {
         logo: 'logo-un-cafe-pour-demain-fb.jpg',
@@ -132,21 +132,21 @@ export const partners: IPartnerCard[] = [
         links: [
             {
                 iconName: 'fas fa-link',
-                url: 'https://uncafepourdemain.com/'
+                url: 'https://uncafepourdemain.com/',
             },
             {
                 iconName: 'fab fa-facebook-square',
-                url: 'https://www.facebook.com/uncafepourdemain/'
+                url: 'https://www.facebook.com/uncafepourdemain/',
             },
             {
                 iconName: 'fab fa-instagram-square',
-                url: 'https://www.instagram.com/uncafepourdemain/'
+                url: 'https://www.instagram.com/uncafepourdemain/',
             },
             {
                 iconName: 'fab fa-linkedin',
-                url: 'https://www.linkedin.com/company/les-alchimistes-lyon/'
-            }
-        ]
+                url: 'https://www.linkedin.com/company/les-alchimistes-lyon/',
+            },
+        ],
     },
     {
         logo: 'logo-day-by-day.png',
@@ -155,20 +155,20 @@ export const partners: IPartnerCard[] = [
         links: [
             {
                 iconName: 'fas fa-link',
-                url: 'https://daybyday-shop.com/'
+                url: 'https://daybyday-shop.com/',
             },
             {
                 iconName: 'fab fa-facebook-square',
-                url: 'https://www.facebook.com/magasinsdaybyday/'
+                url: 'https://www.facebook.com/magasinsdaybyday/',
             },
             {
                 iconName: 'fab fa-instagram-square',
-                url: 'https://www.instagram.com/day_by_day_vrac_shop/'
+                url: 'https://www.instagram.com/day_by_day_vrac_shop/',
             },
             {
                 iconName: 'fab fa-linkedin',
-                url: 'https://www.linkedin.com/company/day-by-day/?originalSubdomain=fr'
-            }
-        ]
+                url: 'https://www.linkedin.com/company/day-by-day/?originalSubdomain=fr',
+            },
+        ],
     },
 ];

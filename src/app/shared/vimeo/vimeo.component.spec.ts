@@ -8,7 +8,7 @@ describe('VimeoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VimeoComponent ]
+      declarations: [ VimeoComponent ],
     })
     .compileComponents();
   }));
