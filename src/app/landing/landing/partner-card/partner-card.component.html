@@ -1,12 +1,13 @@
-<div class="grid xl:grid-col-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2">
-    <div class="m-auto mb-4" *ngFor="let partner of partners">
-        <div class="image-cropper  border border-primary p-1 mb-2"
-            [style.background-image]="getPartnerLogo(partner.logo)">
-        </div>
-        <h3 class="text-center font-bold text-base lg:text-xl">{{partner.name}}</h3>
-        <p class="text-center text-xs lg:text-sm">{{partner.description}}</p>
-        <p class="text-center">
-            <a *ngFor="let link of partner.links" [href]="link.url"><i class="{{link.iconName}}"></i></a>
-        </p>
-    </div>
+<div class="flex flex-wrap">
+  <div class="w-full sm:w-6/12 md:w-4/12 xl:w-3/12 flex flex-col items-center mb-4" *ngFor="let partner of partners">
+    <div
+      class="image-cropper border border-primary p-1 mb-2"
+      [style.background-image]="getPartnerLogo(partner.logo)"
+    ></div>
+    <h3 class="text-center font-bold text-base">{{ partner.name }}</h3>
+    <p class="text-center">{{ partner.description }}</p>
+    <p class="text-center">
+      <a *ngFor="let link of partner.links" [href]="link.url"><i class="{{ link.iconName }}"></i></a>
+    </p>
+  </div>
 </div>

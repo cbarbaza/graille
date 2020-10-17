@@ -1,0 +1,28 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html,
+body {
+  @apply text-secondary;
+  height: 100%;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  @apply text-18 font-bold text-primary;
+}
+
+h2 {
+  @apply text-16 font-medium;
+}
+
+.container {
+  @apply mx-auto px-12 w-full max-w-screen-xl;
+}
