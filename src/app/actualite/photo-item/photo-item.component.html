@@ -1,65 +1,68 @@
 <!-- BLOCK with content left -->
-<div class="flex flex-col lg:flex-row w-full" *ngIf="direction==='left'" [attr.id]="slug">
-    <div class="w-full lg:hidden flex justify-center">
-        <div class="relative flex w-full lg:h-full lg:w-1 bg-primary items-center justify-center">
-            <div
-                class="lg:absolute flex flex-col justify-center w-full lg:h-24 lg:w-24 lg:p-0 p-4 rounder-lg lg:rounded-full border-2 border-primary leading-none text-center z-10 bg-white font-thin">
-                <div>{{date}}</div>
-            </div>
-        </div>
+<div class="flex flex-col lg:flex-row w-full" *ngIf="direction === 'left'" [attr.id]="slug">
+  <div class="w-full lg:hidden flex justify-center">
+    <div class="relative flex w-full lg:h-full lg:w-1 bg-primary items-center justify-center">
+      <div
+        class="lg:absolute flex flex-col justify-center w-full lg:h-24 lg:w-24 lg:p-0 p-4 rounder-lg lg:rounded-full border-2 border-primary leading-none text-center z-10 bg-white font-thin"
+      >
+        <div>{{ date }}</div>
+      </div>
     </div>
-    <!-- left col -->
-    <div class="w-full lg:w-2/5 lg:px-2 py-2">
-        <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
-            <div class="text-gray-600 mb-2 flex justify-between">
-                <div class="font-bold">
-                    <h3>{{title}}</h3>
-                    <p class="text-sm text-gray-500" [innerHTML]="text"></p>
-                </div>
-            </div>
-            <div class="text-gray-600">
-                <img [src]="getImage()" [alt]="title">
-            </div>
+  </div>
+  <!-- left col -->
+  <div class="w-full lg:w-2/5 lg:px-2 py-2">
+    <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+      <div class="text-gray-600 mb-2 flex justify-between">
+        <div class="font-bold">
+          <h3>{{ title }}</h3>
+          <p class="text-sm text-gray-500" [innerHTML]="text"></p>
         </div>
+      </div>
+      <div class="text-gray-600">
+        <img [src]="getImage()" [alt]="title" />
+      </div>
     </div>
-    <!--line column-->
-    <div class="hidden lg:w-1/5 lg:flex justify-center">
-        <div class="relative flex h-full w-1 bg-primary items-center justify-center">
-            <div
-                class="lg:absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-primary leading-none text-center z-10 bg-white font-thin">
-                <div>{{date}}</div>
-            </div>
-        </div>
+  </div>
+  <!--line column-->
+  <div class="hidden lg:w-1/5 lg:flex justify-center">
+    <div class="relative flex h-full w-1 bg-primary items-center justify-center">
+      <div
+        class="lg:absolute flex flex-col justify-center h-24 w-24 rounded-full border-2 border-primary leading-none text-center z-10 bg-white font-thin"
+      >
+        <div>{{ date }}</div>
+      </div>
     </div>
-    <!--right column-->
-    <div class="hidden lg:w-2/5 px-2 py-2 "></div>
+  </div>
+  <!--right column-->
+  <div class="hidden lg:w-2/5 px-2 py-2"></div>
 </div>
 <!-- END BLOCK with content left -->
 
 <!-- BLOCK with content right -->
-<div class="flex flex-col lg:flex-row w-full" *ngIf="direction==='right'" [attr.id]="slug">
-    <!-- left col -->
-    <div class="hidden lg:flex lg:w-2/5 px-2 py-2"></div>
-    <!--line column-->
-    <div class="w-full lg:w-1/5 flex justify-center">
-        <div class="relative flex w-full lg:h-full lg:w-1 bg-primary items-center justify-center">
-            <div
-                class="lg:absolute flex flex-col justify-center w-full lg:h-24 lg:w-24 lg:p-0 p-4 rounder-lg lg:rounded-full border-2 border-primary leading-none text-center z-10 bg-white font-thin">
-                <div>{{date}}</div>
-            </div>
-        </div>
+<div class="flex flex-col lg:flex-row w-full" *ngIf="direction === 'right'" [attr.id]="slug">
+  <!-- left col -->
+  <div class="hidden lg:flex lg:w-2/5 px-2 py-2"></div>
+  <!--line column-->
+  <div class="w-full lg:w-1/5 flex justify-center">
+    <div class="relative flex w-full lg:h-full lg:w-1 bg-primary items-center justify-center">
+      <div
+        class="lg:absolute flex flex-col justify-center w-full lg:h-24 lg:w-24 lg:p-0 p-4 rounder-lg lg:rounded-full border-2 border-primary leading-none text-center z-10 bg-white font-thin"
+      >
+        <div>{{ date }}</div>
+      </div>
     </div>
-    <!--right column-->
-    <div class="w-full lg:w-2/5 lg:px-2 py-2 ">
-        <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
-            <div class="text-gray-600 mb-2 flex justify-between">
-                <div class="font-bold">
-                    <h3>{{title}}</h3>
-                    <p class="text-sm text-gray-500" [innerHTML]="text"></p>
-                </div>
-            </div>
-            <img [src]="getImage()" [alt]="title">
+  </div>
+  <!--right column-->
+  <div class="w-full lg:w-2/5 lg:px-2 py-2">
+    <div class="flex flex-col w-full rounded-lg shadow bg-white px-4 py-5">
+      <div class="text-gray-600 mb-2 flex justify-between">
+        <div class="font-bold">
+          <h3>{{ title }}</h3>
+          <p class="text-sm text-gray-500" [innerHTML]="text"></p>
         </div>
+      </div>
+      <img [src]="getImage()" [alt]="title" />
     </div>
+  </div>
 </div>
 <!-- END BLOCK with content right -->
