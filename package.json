@@ -22,7 +22,7 @@
     "@angular/router": "~9.1.12",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "imagemin-webpack-plugin": "^2.4.2",
-    "ngx-google-analytics": "^8.1.0",
+    "ngx-google-analytics": "^9.0.1",
     "rxjs": "~6.6.3",
     "tailwindcss": "^1.9.3",
     "tslib": "^1.14.1",
