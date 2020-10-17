@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VimeoItemComponent } from './vimeo-item.component';
 
@@ -6,11 +6,11 @@ describe('VimeoItemComponent', () => {
   let component: VimeoItemComponent;
   let fixture: ComponentFixture<VimeoItemComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ VimeoItemComponent ],
+      declarations: [VimeoItemComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
