@@ -98,7 +98,19 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
-    "semicolon": [true, "always"]
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "no-submodule-imports": false,
+    "no-implicit-dependencies": [
+      true,
+      [
+        "src",
+        "app",
+        "protractor"
+      ]
+    ]
   },
   "rulesDirectory": [
     "codelyzer"
