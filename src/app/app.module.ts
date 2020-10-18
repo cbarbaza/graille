@@ -14,6 +14,7 @@ import { VimeoItemComponent } from './actualite/vimeo-item/vimeo-item.component'
 import { PhotoItemComponent } from './actualite/photo-item/photo-item.component';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { environment } from 'src/environments/environment';
+import { NosValeursComponent } from './nos-valeurs/nos-valeurs.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { environment } from 'src/environments/environment';
     VimeoComponent,
     VimeoItemComponent,
     PhotoItemComponent,
+    NosValeursComponent,
   ],
   imports: [
     BrowserModule,
