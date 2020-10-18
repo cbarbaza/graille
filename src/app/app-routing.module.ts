@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { ActualiteComponent } from './actualite/actualite.component';
-import { LandingComponent } from './landing/landing/landing.component';
+import { FAQComponent } from './faq/faq.component';
+import { LandingComponent } from './landing/landing.component';
+import { NosValeursComponent } from './nos-valeurs/nos-valeurs.component';
 
 
 const routerOptions: ExtraOptions = {
@@ -12,7 +14,9 @@ const routerOptions: ExtraOptions = {
 
 const routes: Routes = [
   { path: 'home', component: LandingComponent },
+  { path: 'nos-valeurs', component: NosValeursComponent },
   { path: 'actualite', component: ActualiteComponent },
+  { path: 'faq', component: FAQComponent },
   { path: '**', redirectTo: '/home' },
 ];
 
