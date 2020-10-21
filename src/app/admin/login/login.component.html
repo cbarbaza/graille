@@ -1,0 +1,50 @@
+<div class="m-auto w-1/4 w-50 mt-30 flex flex-col flex-grow text-center bg-primary border rounded m-4 px-8">
+  <h2 class="uppercase text-white">connexion</h2>
+
+  <div class="flex flex-wrap items-stretch w-full mb-4 relative h-15 bg-white items-center rounded mb-6 pr-10">
+    <div class="flex -mr-px justify-center w-15 p-4">
+      <span
+        class="flex items-center leading-normal bg-white px-3 border-0 rounded rounded-r-none text-2xl text-gray-600"
+      >
+        <i class="fas fa-user-circle"></i>
+      </span>
+    </div>
+    <input
+      type="text"
+      class="flex-shrink flex-grow flex-auto leading-normal w-px flex-1 border-0 h-10 border-grey-light rounded rounded-l-none px-3 self-center relative font-roboto text-xl outline-none"
+      placeholder="Email"
+      #email
+    />
+  </div>
+  <div class="flex flex-wrap items-stretch w-full relative h-15 bg-white items-center rounded mb-4">
+    <div class="flex -mr-px justify-center w-15 p-4">
+      <span
+        class="flex items-center leading-normal bg-white rounded rounded-r-none text-xl px-3 whitespace-no-wrap text-gray-600"
+      >
+        <i class="fas fa-lock"></i>
+      </span>
+    </div>
+    <input
+      type="password"
+      class="flex-shrink flex-grow flex-auto leading-normal w-px flex-1 border-0 h-10 px-3 relative self-center font-roboto text-xl outline-none"
+      placeholder="Mot de passe"
+      #password
+    />
+    <div class="flex -mr-px">
+      <span
+        class="flex items-center leading-normal bg-white rounded rounded-l-none border-0 px-3 whitespace-no-wrap text-gray-600"
+      >
+        <i class="fas fa-eye-slash"></i>
+      </span>
+    </div>
+  </div>
+  <div>
+    <input
+      type="button"
+      class="bg-yellow-600 py-4 text-center px-17 md:px-12 md:py-4 text-white rounded leading-tight text-xl md:text-base font-sans my-4"
+      value="connexion"
+      (click)="authService.SignIn(email.value, password.value)"
+    />
+  </div>
+</div>
+`

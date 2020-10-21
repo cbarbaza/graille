@@ -17,6 +17,11 @@ import { InfoCardComponent } from './shared/info-card/info-card.component';
 import { PartnerCardComponent } from './shared/partner-card/partner-card.component';
 import { LandingComponent } from './landing/landing.component';
 
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { LoginComponent } from './admin/login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,12 +36,15 @@ import { LandingComponent } from './landing/landing.component';
     PhotoItemComponent,
     NosValeursComponent,
     FAQComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     NgxGoogleAnalyticsModule.forRoot(environment.googleAnalyticsId),
     NgxGoogleAnalyticsRouterModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
