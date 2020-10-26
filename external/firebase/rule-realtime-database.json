@@ -3,6 +3,10 @@
     "faq": {
       ".read": true,
       ".write": "auth.uid != null"
+    },
+    "partners": {
+      ".read": true,
+      ".write": "auth.uid != null"
     }
   }
 }

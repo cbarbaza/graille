@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { IPartnerCard, partners } from 'src/app/data/partner-card.interface';
+import { Subscription } from 'rxjs';
+import { IPartnerCard } from 'src/app/data/partner-card.interface';
+import { PartnerService } from 'src/app/service/partner/partner.service';
 
 @Component({
   selector: 'app-partner-card',
@@ -9,12 +11,18 @@ import { IPartnerCard, partners } from 'src/app/data/partner-card.interface';
 })
 export class PartnerCardComponent implements OnInit {
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer,
+              private partnersService: PartnerService
+            ) { }
   private static PATH_PARTNER_LOGO = 'assets/images/partner-logo/';
 
-  public partners: IPartnerCard[] = partners;
+  public partners: IPartnerCard[] = [];
+  partnersSubscription: Subscription;
 
   ngOnInit() {
+    console.log('coucou init');
+    this.partnersService.partnersSubject.subscribe((partners: IPartnerCard[]) => this.partners = partners);
+    this.partnersService.emitPartners();
   }
 
   getPartnerLogo(image) {

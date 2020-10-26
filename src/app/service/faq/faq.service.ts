@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 import { Subject } from 'rxjs/internal/Subject';
 import { IInfoCard } from 'src/app/data/info-card.interface';
-import { AuthService } from '../auth/auth.service';
+import { DB_NODE_FAQ } from '../FireBaseConst';
 import DataSnapshot = firebase.database.DataSnapshot;
 
 @Injectable({
@@ -10,16 +10,10 @@ import DataSnapshot = firebase.database.DataSnapshot;
 })
 export class FaqService {
 
-  private static DB_NODE_FAQ = '/faq';
-
   cardsInfo: IInfoCard[] = [];
   cardsInfoSubject = new Subject<IInfoCard[]>();
 
-  constructor(private authService: AuthService) {
-    if(!authService.isLoggedIn){
-      this.authService.SignInAnonymously();
-    }
-
+  constructor() {
     this.getFaqs();
   }
 
@@ -27,22 +21,22 @@ export class FaqService {
     this.cardsInfoSubject.next(this.cardsInfo);
   }
 
+  getFaqs() {
+    firebase.database().ref(DB_NODE_FAQ)
+    .on('value', (data: DataSnapshot) => {
+      this.cardsInfo = data.val() ? data.val() : [];
+      this.emitFaq();
+    });
+  }
+
+  // /!\ BELOW FUNCTION NOT TESTED ! /!\
   saveFaq() {
     firebase.database().ref('/faq').set(this.cardsInfo);
   }
 
-  getFaqs() {
-    firebase.database().ref(FaqService.DB_NODE_FAQ)
-    .on('value', (data: DataSnapshot) => {
-      this.cardsInfo = data.val() ? data.val() : [];
-      this.emitFaq();
-    }
-    );
-  }
-
   getSingleFaq(id: number) {
     return new Promise((resolve, reject) => {
-      firebase.database().ref(`${FaqService.DB_NODE_FAQ}/id`).once('value').then(
+      firebase.database().ref(`${DB_NODE_FAQ}/id`).once('value').then(
         (data: DataSnapshot) => {
           resolve(data.val());
         }, (error) => {
@@ -59,7 +53,7 @@ export class FaqService {
     this.emitFaq();
   }
 
-    removeQuestion(question: IInfoCard) {
+  removeQuestion(question: IInfoCard) {
     const questionIndexToRemove = this.cardsInfo.findIndex(
       (questionEL) => {
         if(questionEL === question) {
