@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "faq": {
+      ".read": true,
+      ".write": "auth.uid != null"
+    }
+  }
+}

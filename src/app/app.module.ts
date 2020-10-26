@@ -20,7 +20,13 @@ import { LandingComponent } from './landing/landing.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { LoginComponent } from './admin/login/login.component';
+import * as firebase from 'firebase';
+
+
+// hacky : https://github.com/angular/angularfire/issues/556
+firebase.initializeApp(environment.firebaseConfig);
 
 @NgModule({
   declarations: [
@@ -45,6 +51,7 @@ import { LoginComponent } from './admin/login/login.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
