@@ -24,7 +24,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { LoginComponent } from './admin/login/login.component';
 import * as firebase from 'firebase';
 
-
+import { defaultSimpleModalOptions, SimpleModalModule } from 'ngx-simple-modal';
+import { ConfirmationDialogComponent } from './shared/dialog/confirmation-dialog/confirmation-dialog.component';
 // hacky : https://github.com/angular/angularfire/issues/556
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -43,6 +44,8 @@ firebase.initializeApp(environment.firebaseConfig);
     NosValeursComponent,
     FAQComponent,
     LoginComponent,
+    ConfirmationDialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,10 @@ firebase.initializeApp(environment.firebaseConfig);
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    SimpleModalModule.forRoot({container: 'modal-container'}, {...defaultSimpleModalOptions, ...{
+      closeOnEscape: true,
+      autoFocus: true,
+    }}),
   ],
   providers: [],
   bootstrap: [AppComponent],

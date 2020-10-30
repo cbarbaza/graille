@@ -25,6 +25,7 @@
     "firebase": "^7.24.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "ngx-google-analytics": "^9.0.1",
+    "ngx-simple-modal": "^1.4.14",
     "rxjs": "~6.6.3",
     "tailwindcss": "^1.9.3",
     "tslib": "^2.0.3",
