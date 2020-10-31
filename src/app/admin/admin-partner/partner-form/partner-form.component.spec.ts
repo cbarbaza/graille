@@ -8,7 +8,7 @@ describe('PartnerFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PartnerFormComponent ]
+      declarations: [ PartnerFormComponent ],
     })
     .compileComponents();
   });

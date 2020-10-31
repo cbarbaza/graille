@@ -8,7 +8,7 @@ describe('AdminFAQComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdminFAQComponent ]
+      declarations: [ AdminFAQComponent ],
     })
     .compileComponents();
   });

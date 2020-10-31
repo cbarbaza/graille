@@ -8,7 +8,7 @@ describe('FAQFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FAQFormComponent ]
+      declarations: [ FAQFormComponent ],
     })
     .compileComponents();
   });
