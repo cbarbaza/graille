@@ -16,6 +16,8 @@ export interface ConfirmModel {
 export class ConfirmationDialogComponent extends SimpleModalComponent<ConfirmModel, boolean> implements ConfirmModel{
   title: string;
   message: string;
+  yesLabel: string;
+  noLabel: string;
 
   constructor() {
     super();
