@@ -8,6 +8,10 @@ body {
   height: 100%;
 }
 
+.body-wrapper {
+  min-height: 80%;
+}
+
 a,
 a:hover,
 a:visited {
@@ -25,4 +29,51 @@ h2 {
 
 .container {
   @apply mx-auto px-12 w-full max-w-screen-xl;
+}
+
+// utils ***********************
+
+// used to see use fullscreen without footer
+.content-wrapper {
+  min-height: calc(100vh - 70px);
+  max-height: calc(100vh - 70px);
+}
+
+// baseline FROM ************************
+.input-text {
+  width: 100%;
+  @apply shadow;
+  @apply appearance-none;
+  @apply border;
+  @apply rounded;
+  @apply w-full;
+  @apply py-2;
+  @apply px-3;
+  @apply text-gray-700;
+  @apply leading-tight;
+
+  &:focus {
+    @apply outline-none;
+    @apply shadow-outline;
+  }
+}
+
+.input-label {
+  @apply block;
+  @apply text-gray-700;
+  @apply font-bold;
+  @apply mt-4;
+  @apply mb-2;
+}
+
+// TOOLTIP **********************************
+.tooltip .tooltip-text {
+  visibility: hidden;
+  text-align: left;
+  padding: 2px 6px;
+  position: absolute;
+  z-index: 100;
+}
+.tooltip:hover .tooltip-text {
+  visibility: visible;
 }
