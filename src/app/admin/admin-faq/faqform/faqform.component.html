@@ -6,7 +6,7 @@
     <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
       <!--header-->
       <div class="flex items-start justify-between p-5 border-b border-solid border-gray-300 rounded-t">
-        <h3 class="text-3xl font-semibold">Partenaire</h3>
+        <h3 class="text-3xl font-semibold">Question</h3>
         <button
           class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
           (click)="close()"
@@ -17,28 +17,16 @@
         </button>
       </div>
       <!--body-->
-      <form [formGroup]="partnerForm" (ngSubmit)="apply(partnerForm.value)">
+      <form [formGroup]="faqForm" (ngSubmit)="apply(faqForm.value)">
         <div class="relative p-6 flex-auto">
-          <label class="input-label" for="name"> Nom </label>
-          <input class="input-text" id="name" type="text" formControlName="name" />
+          <label class="input-label" for="title"> Titre </label>
+          <input class="input-text" id="title" type="text" formControlName="title" />
 
-          <label class="input-label" for="description"> Description </label>
-          <textarea class="input-text" id="description" formControlName="description"></textarea>
+          <label class="input-label" for="text"> Text </label>
+          <textarea class="input-text" id="text" formControlName="text"></textarea>
 
-          <label class="input-label" for="logo"> Logo </label>
-          <input type="file" id="logo" #partnerLogo (change)="onFileSelected($event)" name="logo" autocomplete="off" />
-
-          <label class="input-label" for="link"> Site web </label>
-          <input class="input-text" id="link" type="text" formControlName="link" />
-
-          <label class="input-label" for="facebook"> Facebook </label>
-          <input class="input-text" id="facebook" type="text" formControlName="facebook" />
-
-          <label class="input-label" for="instagram"> Instagram </label>
-          <input class="input-text" id="instagram" type="text" formControlName="instagram" />
-
-          <label class="input-label" for="linkedin"> Linkedin </label>
-          <input class="input-text" id="linkedin" type="text" formControlName="linkedin" />
+          <label class="input-label" for="icone"> Icone</label>
+          <input class="input-text" id="icone" type="text" formControlName="icone" />
         </div>
         <!--footer-->
         <div class="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">

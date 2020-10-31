@@ -34,6 +34,7 @@ import { AdminPartnerComponent } from './admin/admin-partner/admin-partner.compo
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { PartnerFormComponent } from './admin/admin-partner/partner-form/partner-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FAQFormComponent } from './admin/admin-faq/faqform/faqform.component';
 
 // hacky : https://github.com/angular/angularfire/issues/556
 firebase.initializeApp(environment.firebaseConfig);
@@ -59,6 +60,7 @@ firebase.initializeApp(environment.firebaseConfig);
     AdminPartnerComponent,
     AdminHomeComponent,
     PartnerFormComponent,
+    FAQFormComponent,
 
   ],
   imports: [

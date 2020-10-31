@@ -30,3 +30,30 @@ h2 {
 .container {
   @apply mx-auto px-12 w-full max-w-screen-xl;
 }
+
+// baseline FROM ************************
+.input-text {
+  width: 100%;
+  @apply shadow;
+  @apply appearance-none;
+  @apply border;
+  @apply rounded;
+  @apply w-full;
+  @apply py-2;
+  @apply px-3;
+  @apply text-gray-700;
+  @apply leading-tight;
+
+  &:focus {
+    @apply outline-none;
+    @apply shadow-outline;
+  }
+}
+
+.input-label {
+  @apply block;
+  @apply text-gray-700;
+  @apply font-bold;
+  @apply mt-4;
+  @apply mb-2;
+}
