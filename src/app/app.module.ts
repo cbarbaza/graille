@@ -21,11 +21,20 @@ import { LandingComponent } from './landing/landing.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
 import { LoginComponent } from './admin/login/login.component';
 import * as firebase from 'firebase';
 
 import { defaultSimpleModalOptions, SimpleModalModule } from 'ngx-simple-modal';
 import { ConfirmationDialogComponent } from './shared/dialog/confirmation-dialog/confirmation-dialog.component';
+import { AdminComponent } from './admin/admin/admin.component';
+import { AdminFAQComponent } from './admin/admin-faq/admin-faq.component';
+import { AdminPartnerComponent } from './admin/admin-partner/admin-partner.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { PartnerFormComponent } from './admin/admin-partner/partner-form/partner-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 // hacky : https://github.com/angular/angularfire/issues/556
 firebase.initializeApp(environment.firebaseConfig);
 
@@ -45,16 +54,24 @@ firebase.initializeApp(environment.firebaseConfig);
     FAQComponent,
     LoginComponent,
     ConfirmationDialogComponent,
+    AdminComponent,
+    AdminFAQComponent,
+    AdminPartnerComponent,
+    AdminHomeComponent,
+    PartnerFormComponent,
 
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgxGoogleAnalyticsModule.forRoot(environment.googleAnalyticsId),
     NgxGoogleAnalyticsRouterModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    AngularFireStorageModule,
     SimpleModalModule.forRoot({container: 'modal-container'}, {...defaultSimpleModalOptions, ...{
       closeOnEscape: true,
       autoFocus: true,

@@ -13,7 +13,7 @@ export interface ConfirmModel {
   templateUrl: './confirmation-dialog.component.html',
   styleUrls: ['./confirmation-dialog.component.scss'],
 })
-export class ConfirmationDialogComponent extends SimpleModalComponent<ConfirmModel, boolean> implements ConfirmModel {
+export class ConfirmationDialogComponent extends SimpleModalComponent<ConfirmModel, boolean> implements ConfirmModel{
   title: string;
   message: string;
 

@@ -1,0 +1,25 @@
+.input-text {
+  width: 100%;
+  @apply shadow;
+  @apply appearance-none;
+  @apply border;
+  @apply rounded;
+  @apply w-full;
+  @apply py-2;
+  @apply px-3;
+  @apply text-gray-700;
+  @apply leading-tight;
+
+  &:focus {
+    @apply outline-none;
+    @apply shadow-outline;
+  }
+}
+
+label {
+  @apply block;
+  @apply text-gray-700;
+  @apply font-bold;
+  @apply mt-4;
+  @apply mb-2;
+}

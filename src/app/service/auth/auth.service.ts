@@ -29,19 +29,12 @@ export class AuthService {
 
     // Sign in with email/password
     SignIn(email, password) {
-      console.log('request', email, password);
-
       return this.afAuth.signInWithEmailAndPassword(email, password)
       .then((result) => {
-        this.router.navigate(['home']);
+        this.router.navigate(['admin/home']);
       }).catch((error) => {
         window.alert(error.message);
       });
-    }
-
-
-    async SignInAnonymously(){
-      await this.afAuth.signInAnonymously().catch((error) => console.log('error signInAnonymously'));
     }
 
     async logout(){

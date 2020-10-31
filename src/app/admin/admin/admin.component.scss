@@ -1,0 +1,13 @@
+.admin-wrapper {
+  min-height: calc(100vh - 70px);
+  max-height: calc(100vh - 70px);
+}
+
+.left-menu {
+  width: 180px;
+  min-height: 100%;
+
+  .icon {
+    width: 22px;
+  }
+}

@@ -29,4 +29,16 @@ export class PartnerService {
     }
     );
   }
+
+  addPartner(newPartner: IPartnerCard) {
+    firebase.database().ref(DB_NODE_PARTNERS).push().set(newPartner);
+  }
+
+  removePartner(partnerId: string){
+    firebase.database().ref(`${DB_NODE_PARTNERS}/${partnerId}`).remove();
+  }
+
+  updatePartner(partnerId: string, newPartner: IPartnerCard){
+    firebase.database().ref(`${DB_NODE_PARTNERS}/${partnerId}`).update(newPartner);
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { BASE_PATH_ACTUALITE } from 'src/app/service/GrailleConst';
 
 @Component({
   selector: 'app-photo-item',
@@ -7,7 +8,6 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./photo-item.component.scss'],
 })
 export class PhotoItemComponent implements OnInit {
-  private static BASE_PATH_ACTUALITE = 'assets/images/actualite/';
 
   @Input()
   public direction: string; // should be left ort right
@@ -33,7 +33,7 @@ export class PhotoItemComponent implements OnInit {
   }
 
   getImage() {
-    return `${PhotoItemComponent.BASE_PATH_ACTUALITE}${this.imagePath}`;
+    return `${BASE_PATH_ACTUALITE}${this.imagePath}`;
   }
 
 }
