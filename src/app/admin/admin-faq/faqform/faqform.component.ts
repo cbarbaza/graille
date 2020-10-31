@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { SimpleModalComponent } from 'ngx-simple-modal';
 import { IInfoCard } from 'src/app/data/info-card.interface';
+import { EDITOR_CONFIG } from 'src/app/service/EditorConfig';
 
 @Component({
   selector: 'app-faqform',
@@ -12,6 +13,7 @@ export class FAQFormComponent extends SimpleModalComponent<IInfoCard, IInfoCard>
 
   faqForm: FormGroup;
 
+  editorConfig = EDITOR_CONFIG;
 
   title: string;
   titleIcon: string;
@@ -22,7 +24,6 @@ export class FAQFormComponent extends SimpleModalComponent<IInfoCard, IInfoCard>
    }
 
   ngOnInit(): void {
-
     this.faqForm = this.formBuilder.group({
       title: this.title || '',
       titleIcon: this.titleIcon  || '',
@@ -35,7 +36,7 @@ export class FAQFormComponent extends SimpleModalComponent<IInfoCard, IInfoCard>
     const newQuestion: IInfoCard = {
       title: formValue.title,
       titleIcon: formValue.titleIcon,
-      text: this.text,
+      text: formValue.text,
     };
 
     this.result = newQuestion;

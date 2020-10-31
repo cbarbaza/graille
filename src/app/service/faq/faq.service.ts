@@ -29,40 +29,15 @@ export class FaqService {
     });
   }
 
-  // /!\ BELOW FUNCTION NOT TESTED ! /!\
-  saveFaq() {
-    firebase.database().ref('/faq').set(this.cardsInfo);
+  addQuestion(newQuestion: IInfoCard) {
+    firebase.database().ref(DB_NODE_FAQ).push().set(newQuestion);
   }
 
-  getSingleFaq(id: number) {
-    return new Promise((resolve, reject) => {
-      firebase.database().ref(`${DB_NODE_FAQ}/id`).once('value').then(
-        (data: DataSnapshot) => {
-          resolve(data.val());
-        }, (error) => {
-          reject(error);
-        }
-        );
-      }
-    );
+  removeQuestion(questionId: string){
+    firebase.database().ref(`${DB_NODE_FAQ}/${questionId}`).remove();
   }
 
-  createNewQuestion(newInfoCard: IInfoCard) {
-    this.cardsInfo.push(newInfoCard);
-    this.saveFaq();
-    this.emitFaq();
-  }
-
-  removeQuestion(question: IInfoCard) {
-    const questionIndexToRemove = this.cardsInfo.findIndex(
-      (questionEL) => {
-        if(questionEL === question) {
-          return true;
-        }
-      }
-    );
-    this.cardsInfo.splice(questionIndexToRemove, 1);
-    this.saveFaq();
-    this.emitFaq();
+  updateQuestion(questionId: string, newQuestion: IInfoCard){
+    firebase.database().ref(`${DB_NODE_FAQ}/${questionId}`).update(newQuestion);
   }
 }

@@ -1,7 +1,7 @@
 <div
   class="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center flex"
 >
-  <div class="relative w-1/3 my-6 mx-auto max-w-6xl">
+  <div class="relative w-full lg:w-2/3 my-6 mx-auto max-w-6xl">
     <!--content-->
     <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
       <!--header-->
@@ -23,10 +23,25 @@
           <input class="input-text" id="title" type="text" formControlName="title" />
 
           <label class="input-label" for="text"> Text </label>
-          <textarea class="input-text" id="text" formControlName="text"></textarea>
+          <angular-editor formControlName="text" [config]="editorConfig"></angular-editor>
 
-          <label class="input-label" for="icone"> Icone</label>
-          <input class="input-text" id="icone" type="text" formControlName="icone" />
+          <label class="input-label" for="titleIcon">
+            Icone
+            <i class="fas fa-info-circle tooltip">
+              <div class="tooltip-text bg-blue-200 p-3 -mt-20 -ml-12 rounded">
+                <p class="pb-1">
+                  Les icones sont disponible
+                  <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">ici </a>
+                </p>
+                <p class="pb-1">
+                  Cherche un icône, clique dessus puis clique sur "Start using This icon" et copie le code fourni qui
+                  ressemble à :
+                </p>
+                <pre><code>&lt;i class="fas fa-phone"&gt;&lt;/i&gt;</code></pre>
+              </div>
+            </i>
+          </label>
+          <input class="input-text" id="titleIcon" type="text" formControlName="titleIcon" />
         </div>
         <!--footer-->
         <div class="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">

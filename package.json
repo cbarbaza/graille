@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "@kolkov/angular-editor": "^1.1.4",
     "firebase": "^7.24.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "ngx-google-analytics": "^9.0.1",

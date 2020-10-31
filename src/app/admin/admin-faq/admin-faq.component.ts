@@ -35,15 +35,15 @@ export class AdminFAQComponent implements OnInit {
     const disposable = this.simpleModalService.addModal(ConfirmationDialogComponent, confirmModel)
     .subscribe((confirm)=>{
       if(confirm){
-        // this.faqService.removeQuestion(cardId);
+        this.faqService.removeQuestion(cardId);
       }
     });
   }
 
-  showAdd(id: string){
+  showAdd(questionId: string){
     let card: IInfoCard = null;
-      if(id !== null){
-        card = this.cards[id];
+      if(questionId !== null){
+        card = this.cards[questionId];
       } else {
         card = {
           title: null,
@@ -55,11 +55,11 @@ export class AdminFAQComponent implements OnInit {
     const disposable = this.simpleModalService.addModal(FAQFormComponent, card)
     .subscribe((newQuestion)=>{
       if(newQuestion){
-        // if(id === null){
-        //   this.partnersService.addPartner(newPartner);
-        // } else {
-        //   this.partnersService.updatePartner(id, newPartner);
-        // }
+        if(questionId === null){
+          this.faqService.addQuestion(newQuestion);
+        } else {
+          this.faqService.updateQuestion(questionId, newQuestion);
+        }
       }
     });
   }
