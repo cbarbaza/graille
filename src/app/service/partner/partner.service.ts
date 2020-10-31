@@ -1,44 +1,46 @@
 import { Injectable } from '@angular/core';
-import * as firebase from 'firebase';
-import { Subject } from 'rxjs';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { IInfoCard } from 'src/app/data/info-card.interface';
 import { IPartnerCard } from 'src/app/data/partner-card.interface';
 import { DB_NODE_PARTNERS } from '../FireBaseConst';
-import DataSnapshot = firebase.database.DataSnapshot;
 
 @Injectable({
   providedIn: 'root',
 })
 export class PartnerService {
 
-  partners: IPartnerCard[] = [];
-  partnersSubject = new Subject<IPartnerCard[]>();
+  partnersRef: AngularFireList<any>;
+  partners: Observable<any[]>;
 
-  constructor() {
-    this.getPartners();
-  }
-
-  emitPartners() {
-    this.partnersSubject.next(this.partners);
-  }
-
-  getPartners() {
-    firebase.database().ref(DB_NODE_PARTNERS)
-    .on('value', (data: DataSnapshot) => {
-      this.partners = data.val() ? data.val() : [];
-      this.emitPartners();
-    }
+  constructor(public db: AngularFireDatabase) {
+    this.partnersRef = db.list<IPartnerCard>(DB_NODE_PARTNERS);
+    // Use snapshotChanges().map() to store the key
+    this.partners = this.partnersRef.snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
     );
   }
 
+  getPartners() {
+    return this.db.list<IPartnerCard>(DB_NODE_PARTNERS).valueChanges();
+  }
+
+  getPartner(partnerId: string){
+    return this.db.object<IPartnerCard>(`${DB_NODE_PARTNERS}/${partnerId}`).valueChanges();
+  }
+
   addPartner(newPartner: IPartnerCard) {
-    firebase.database().ref(DB_NODE_PARTNERS).push().set(newPartner);
+    this.db.list(DB_NODE_PARTNERS).push(newPartner);
   }
 
   removePartner(partnerId: string){
-    firebase.database().ref(`${DB_NODE_PARTNERS}/${partnerId}`).remove();
+    this.db.list(DB_NODE_PARTNERS).remove(partnerId);
   }
 
   updatePartner(partnerId: string, newPartner: IPartnerCard){
-    firebase.database().ref(`${DB_NODE_PARTNERS}/${partnerId}`).update(newPartner);
+    this.db.list(DB_NODE_PARTNERS).update(partnerId, newPartner);
   }
 }

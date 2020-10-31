@@ -113,7 +113,7 @@ export class PartnerFormComponent extends SimpleModalComponent<IPartnerCard, IPa
     }
 
     const newPartner: IPartnerCard = {
-      logo: this.logo,
+      logo: this.logo || '',
       name: formValue.name,
       description: formValue.description,
       links,

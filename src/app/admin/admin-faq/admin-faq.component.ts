@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { SimpleModalService } from 'ngx-simple-modal';
-import { Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { IInfoCard } from 'src/app/data/info-card.interface';
-import { IPartnerCard } from 'src/app/data/partner-card.interface';
 import { FaqService } from 'src/app/service/faq/faq.service';
 import { ConfirmationDialogComponent } from 'src/app/shared/dialog/confirmation-dialog/confirmation-dialog.component';
-import { PartnerFormComponent } from '../admin-partner/partner-form/partner-form.component';
 import { FAQFormComponent } from './faqform/faqform.component';
+
 
 @Component({
   selector: 'app-admin-faq',
@@ -15,21 +14,21 @@ import { FAQFormComponent } from './faqform/faqform.component';
 })
 export class AdminFAQComponent implements OnInit {
 
-  public cards: IInfoCard[] = [];
-  cardsSubscription: Subscription;
+  public cards: Observable<IInfoCard[]>;
+  public workingCard$;
+
 
   constructor(private faqService: FaqService,
     private simpleModalService:SimpleModalService) { }
 
   ngOnInit() {
-    this.faqService.cardsInfoSubject.subscribe((infoCards: IInfoCard[]) => this.cards = infoCards);
-    this.faqService.emitFaq();
+    this.cards = this.faqService.faqs;
   }
 
-  showConfirmDelete(cardId: string) {
+  showConfirmDelete(cardId: string, cardTitle: string) {
     const confirmModel = {
       title: 'Suppression d\'une question',
-      message: `Etes vous sur de vouloir suprimmer la question "${this.cards[cardId].title} ?" `,
+      message: `Etes vous sur de vouloir suprimmer la question "${cardTitle} ?" `,
     };
 
     const disposable = this.simpleModalService.addModal(ConfirmationDialogComponent, confirmModel)
@@ -41,18 +40,22 @@ export class AdminFAQComponent implements OnInit {
   }
 
   showAdd(questionId: string){
-    let card: IInfoCard = null;
       if(questionId !== null){
-        card = this.cards[questionId];
+         this.workingCard$ = this.faqService.getFaq(questionId).subscribe(res => {
+            this.workingCard$.unsubscribe();
+            this.openPopUpAdd(res, questionId);
+        });
       } else {
-        card = {
+        this.openPopUpAdd({
           title: null,
           titleIcon: null,
           text: null,
-        };
+        }, null);
       }
+  }
 
-    const disposable = this.simpleModalService.addModal(FAQFormComponent, card)
+  openPopUpAdd(card: IInfoCard, questionId: string){
+        const disposable = this.simpleModalService.addModal(FAQFormComponent, card)
     .subscribe((newQuestion)=>{
       if(newQuestion){
         if(questionId === null){

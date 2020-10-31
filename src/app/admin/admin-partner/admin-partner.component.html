@@ -40,15 +40,15 @@
         </tr>
       </thead>
       <tbody class="bg-white">
-        <tr *ngFor="let partner of partners | keyvalue">
+        <tr *ngFor="let partner of partners | async">
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
-            <div class="text-sm leading-5 text-blue-900">{{ partner.value.name }}</div>
+            <div class="text-sm leading-5 text-blue-900">{{ partner.name }}</div>
           </td>
           <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
-            {{ partner.value.description }}
+            {{ partner.description }}
           </td>
           <td class="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
-            <a *ngFor="let link of partner.value.links" [href]="link.url"><i class="{{ link.iconName }} pl-2"></i></a>
+            <a *ngFor="let link of partner.links" [href]="link.url"><i class="{{ link.iconName }} pl-2"></i></a>
           </td>
           <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-500 text-sm leading-5">
             <button
@@ -58,7 +58,7 @@
               <i class="fas fa-edit"></i>
             </button>
             <button
-              (click)="showConfirmDelete(partner.key)"
+              (click)="showConfirmDelete(partner.key, partner.name)"
               class="mx-1 px-5 py-2 border-red-500 border text-red-500 rounded transition duration-300 hover:bg-red-700 hover:text-white focus:outline-none"
             >
               <i class="fas fa-trash-alt"></i>

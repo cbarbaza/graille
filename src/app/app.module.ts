@@ -24,7 +24,6 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { LoginComponent } from './admin/login/login.component';
-import * as firebase from 'firebase';
 
 import { defaultSimpleModalOptions, SimpleModalModule } from 'ngx-simple-modal';
 import { ConfirmationDialogComponent } from './shared/dialog/confirmation-dialog/confirmation-dialog.component';
@@ -37,9 +36,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FAQFormComponent } from './admin/admin-faq/faqform/faqform.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { HttpClientModule } from '@angular/common/http';
-
-// hacky : https://github.com/angular/angularfire/issues/556
-firebase.initializeApp(environment.firebaseConfig);
 
 @NgModule({
   declarations: [

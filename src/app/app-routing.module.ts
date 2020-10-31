@@ -32,7 +32,7 @@ const adminChildren = [
   },
   {
     path: 'home',
-    component: AdminFAQComponent, //redirect to other page while creating admin/home
+    component: AdminFAQComponent, // redirect to other page while creating admin/home
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {

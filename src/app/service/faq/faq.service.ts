@@ -1,43 +1,45 @@
 import { Injectable } from '@angular/core';
-import * as firebase from 'firebase';
-import { Subject } from 'rxjs/internal/Subject';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 import { IInfoCard } from 'src/app/data/info-card.interface';
 import { DB_NODE_FAQ } from '../FireBaseConst';
-import DataSnapshot = firebase.database.DataSnapshot;
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FaqService {
 
-  cardsInfo: IInfoCard[] = [];
-  cardsInfoSubject = new Subject<IInfoCard[]>();
+  faqsRef: AngularFireList<any>;
+  faqs: Observable<any[]>;
 
-  constructor() {
-    this.getFaqs();
-  }
-
-  emitFaq() {
-    this.cardsInfoSubject.next(this.cardsInfo);
+  constructor(public db: AngularFireDatabase) {
+    this.faqsRef = db.list(DB_NODE_FAQ);
+    // Use snapshotChanges().map() to store the key
+    this.faqs = this.faqsRef.snapshotChanges().pipe(
+      map(changes =>
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+      )
+    );
   }
 
   getFaqs() {
-    firebase.database().ref(DB_NODE_FAQ)
-    .on('value', (data: DataSnapshot) => {
-      this.cardsInfo = data.val() ? data.val() : [];
-      this.emitFaq();
-    });
+    return this.db.list<IInfoCard>(DB_NODE_FAQ).valueChanges();
+  }
+
+  getFaq(questionId: string){
+    return this.db.object<IInfoCard>(`${DB_NODE_FAQ}/${questionId}`).valueChanges();
   }
 
   addQuestion(newQuestion: IInfoCard) {
-    firebase.database().ref(DB_NODE_FAQ).push().set(newQuestion);
+    this.db.list(DB_NODE_FAQ).push(newQuestion);
   }
 
   removeQuestion(questionId: string){
-    firebase.database().ref(`${DB_NODE_FAQ}/${questionId}`).remove();
+    this.db.list(DB_NODE_FAQ).remove(questionId);
   }
 
   updateQuestion(questionId: string, newQuestion: IInfoCard){
-    firebase.database().ref(`${DB_NODE_FAQ}/${questionId}`).update(newQuestion);
+    this.db.list(DB_NODE_FAQ).update(questionId, newQuestion);
   }
 }
