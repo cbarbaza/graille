@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "staging-graille": {
+      "hosting": {
+        "graille-v3": [
+          "staging-graille"
+        ]
+      }
+    }
+  }
+}

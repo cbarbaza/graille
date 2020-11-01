@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IInfoCard } from 'src/app/data/info-card.interface';
 import { FaqService } from 'src/app/service/faq/faq.service';
 
@@ -8,18 +7,19 @@ import { FaqService } from 'src/app/service/faq/faq.service';
   templateUrl: './info-card.component.html',
   styleUrls: ['./info-card.component.scss'],
 })
-export class InfoCardComponent implements OnInit {
+export class InfoCardComponent implements OnInit, OnDestroy {
 
   public cards: IInfoCard[] = [];
-  cardsSubscription: Subscription;
-
 
   constructor(private faqService: FaqService) {
   }
+  ngOnDestroy(): void {
+  }
 
   ngOnInit() {
-    this.faqService.cardsInfoSubject.subscribe((infoCards: IInfoCard[]) => this.cards = infoCards);
-    this.faqService.emitFaq();
+    this.faqService.getFaqs().subscribe(faqs => {
+      this.cards = faqs;
+    });
   }
 
 }

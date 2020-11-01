@@ -1,12 +1,12 @@
+
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { SimpleModalService } from 'ngx-simple-modal';
-import { Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { IPartnerCard } from 'src/app/data/partner-card.interface';
 import { PATH_PARTNER_LOGO } from 'src/app/service/GrailleConst';
 import { PartnerService } from 'src/app/service/partner/partner.service';
 import { ConfirmationDialogComponent } from 'src/app/shared/dialog/confirmation-dialog/confirmation-dialog.component';
-import { PartnerCardComponent } from 'src/app/shared/partner-card/partner-card.component';
 import { PartnerFormComponent } from './partner-form/partner-form.component';
 
 @Component({
@@ -16,26 +16,26 @@ import { PartnerFormComponent } from './partner-form/partner-form.component';
 })
 export class AdminPartnerComponent implements OnInit {
 
-  public partners: IPartnerCard[] = [];
-  partnersSubscription: Subscription;
+  public partners: Observable<IPartnerCard[]>;
+  public workingPartner$;
+
 
   constructor(private sanitizer: DomSanitizer,
               private partnersService: PartnerService,
               private simpleModalService:SimpleModalService) { }
 
   ngOnInit() {
-    this.partnersService.partnersSubject.subscribe((partners: IPartnerCard[]) => this.partners = partners);
-    this.partnersService.emitPartners();
+    this.partners = this.partnersService.partners;
   }
 
   getPartnerLogo(image) {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${PATH_PARTNER_LOGO}${image})`);
   }
 
-  showConfirmDelete(partnerId: string) {
+  showConfirmDelete(partnerId: string, partnerName: string) {
     const confirmModel = {
       title: 'Suppression d\'un partenaire',
-      message: `Etes vous sur de vouloir suprimmer le partenanire ${this.partners[partnerId].name} ? `,
+      message: `Etes vous sur de vouloir suprimmer le partenanire ${partnerName} ? `,
     };
 
     const disposable = this.simpleModalService.addModal(ConfirmationDialogComponent, confirmModel)
@@ -46,26 +46,30 @@ export class AdminPartnerComponent implements OnInit {
     });
   }
 
-  showAdd(id: string){
-    let partner: IPartnerCard = null;
-      if(id !== null){
-        partner = this.partners[id];
-      } else {
-        partner = {
-          logo: null,
-          name: null,
-          description: null,
-          links: [],
-        };
-      }
+  showAdd(partnerId: string){
+    if(partnerId !== null){
+        this.workingPartner$ = this.partnersService.getPartner(partnerId).subscribe(res => {
+          this.workingPartner$.unsubscribe();
+          this.openPopUpAdd(res, partnerId);
+      });
+    } else {
+      this.openPopUpAdd({
+        logo: null,
+        name: null,
+        description: null,
+        links: [],
+      }, null);
+    }
+  }
 
+    openPopUpAdd(partner: IPartnerCard, partnerId: string){
     const disposable = this.simpleModalService.addModal(PartnerFormComponent, partner)
     .subscribe((newPartner)=>{
       if(newPartner){
-        if(id === null){
+        if(partnerId === null){
           this.partnersService.addPartner(newPartner);
         } else {
-          this.partnersService.updatePartner(id, newPartner);
+          this.partnersService.updatePartner(partnerId, newPartner);
         }
       }
     });
