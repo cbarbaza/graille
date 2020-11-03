@@ -2,7 +2,7 @@
   <div class="w-full sm:w-6/12 md:w-4/12 xl:w-3/12 flex flex-col items-center mb-4" *ngFor="let partner of partners">
     <div
       class="image-cropper border border-primary p-1 mb-2"
-      [style.background-image]="getPartnerLogo(partner.logo)"
+      [style.background-image]="partnersService.getPartnerLogo(partner.logo)"
     ></div>
     <h3 class="text-center font-bold text-base">{{ partner.name }}</h3>
     <p class="text-center">{{ partner.description }}</p>
