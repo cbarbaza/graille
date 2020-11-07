@@ -6,7 +6,16 @@ module.exports = {
   purge: ['./src/**/*.html'],
   theme: {
     fontFamily: {
-      heading: ['Fira Sans', 'system-ui', 'BlinkMacSystemFont', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+      heading: [
+        'PlayfairDisplay',
+        'Fira Sans',
+        'system-ui',
+        'BlinkMacSystemFont',
+        '-apple-system',
+        'Segoe UI',
+        'Roboto',
+        'sans-serif',
+      ],
       sans: ['Roboto', 'system-ui', 'BlinkMacSystemFont', '-apple-system', 'Segoe UI', 'sans-serif'],
     },
     fontSize: {

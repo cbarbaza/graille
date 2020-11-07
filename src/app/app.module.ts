@@ -37,6 +37,8 @@ import { FAQFormComponent } from './admin/admin-faq/faqform/faqform.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgxGalleryModule } from 'ngx-gallery-9';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +80,7 @@ import { HttpClientModule } from '@angular/common/http';
     }}),
     AngularEditorModule,
     HttpClientModule,
+    NgxGalleryModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,22 +1,25 @@
 <div class="bg-gray-100">
-  <div class="w-full object-cover header-bg table text-center">
-    <div class="table-cell align-middle">
-      <h1 class="text-opacity-90 font-bold mt-40">Graille</h1>
-      <h2 class="text-gray-200 text-opacity-75">Cuisine ambulante anti-gaspi</h2>
-      <h2 class="text-gray-200 text-opacity-75">Pour la rue, Avec la rue, Dans la rue</h2>
+  <div class="w-full">
+    <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+    <div class="text-center overlap-header">
+      <div class="content">
+        <h1 class="text-opacity-90 font-bold">Graille</h1>
+        <h2 class="text-gray-200 text-opacity-75 mt-8">Cuisine ambulante anti-gaspi</h2>
+        <h2 class="text-gray-200 text-opacity-75">Pour la rue, Avec la rue, Dans la rue</h2>
+      </div>
     </div>
   </div>
   <div class="container flex flex-col flex-grow">
     <section class="w-full p-4 flex flew-row">
       <div class="text-center">
         <h2 class="text-xl lg:text-2xl uppercase text-center pb-4 text-primary">Graille c'est quoi ?</h2>
-        <p class="pb-2 px-4 text-justify text-center text-lg">
+        <p class="pb-2 px-4 text-justify text-center">
           Graille, c’est une équipe citoyenne faite de cuistot.es des quatre coins de Lyon. Nous organisons des cuisines
           mobiles et éphémères, on va de squat en camp, en passant par la rue. Les brigades sont constituées d’avec et
           sans abris, menées par des chef.fes expérimenté.es, les repas préparés avec les invendus de nos supers
           partenaires, des commerçants locaux, solidaires et responsables.
         </p>
-        <p class="pb-2 px-4 text-justify text-center text-lg">
+        <p class="pb-2 px-4 text-justify text-center">
           Parce qu’à Graille, on entreprend une démarche éco-responsable. On collabore avec des enseignes zéro déchet,
           encourageant le vrac, les fruits et légumes issue d'une agriculture biologique ou responsable. On composte nos
           déchets, on se déplace en majorité à vélo. C’est d’ailleurs en selle qu’à la fin des cuisines on part
@@ -26,19 +29,19 @@
         <div>
           <button
             routerLink="/nos-valeurs"
-            class="bg-primary hover:bg-gray-200 hover:text-primary text-white text-lg font-bold m-4 py-2 px-4 rounded"
+            class="bg-primary hover:bg-gray-200 hover:text-primary text-white font-bold m-4 py-2 px-4 rounded"
           >
             Nos valeurs
           </button>
           <button
             routerLink="/actualite"
-            class="bg-primary hover:bg-gray-200 hover:text-primary text-white text-lg font-bold m-4 py-2 px-4 rounded"
+            class="bg-primary hover:bg-gray-200 hover:text-primary text-white font-bold m-4 py-2 px-4 rounded"
           >
             L'actualité
           </button>
           <button
             routerLink="/faq"
-            class="bg-primary hover:bg-gray-200 hover:text-primary text-white text-lg font-bold m-4 py-2 px-4 rounded"
+            class="bg-primary hover:bg-gray-200 hover:text-primary text-white font-bold m-4 py-2 px-4 rounded"
           >
             FAQ
           </button>
@@ -50,25 +53,25 @@
       <img class="m-auto" alt="graille en chiffre" src="assets/images/landing/chiffre.png" />
     </section>
 
-    <section class="text-center mx-auto my-4 py-4 lg:w-3/5 w-full border border-primary rounded-lg shadow-lg">
+    <section class="text-center mx-auto my-4 py-4 lg:w-4/5 w-full border border-primary rounded-lg shadow-lg">
       <h2 class="uppercase text-center pb-4 text-primary">Tu veux soutenir une cause sociale et environnementale ?</h2>
-      <p class="text-center text-lg text-gray-600">Offrir des bocaux, participer aux cuisines ou faire un don ?</p>
+      <p class="text-center text-gray-600">Offrir des bocaux, participer aux cuisines ou faire un don ?</p>
       <a href="https://linktr.ee/graillelyon" target="_blank">
         <button
-          class="bg-primary hover:bg-gray-200 hover:text-primary text-white text-lg font-bold my-4 py-2 px-4 rounded"
+          class="font-heading bg-primary hover:bg-gray-200 hover:text-primary text-white font-bold my-4 py-2 px-4 rounded"
         >
           <i class="p-1 fas fa-hand-peace"></i>
           Je soutiens Graille !
           <i class="p-1 fas fa-hand-peace"></i>
         </button>
       </a>
-      <p class="text-center text-lg text-gray-600">
+      <p class="text-center text-gray-600">
         Graille a besoin de vous pour régaler les potos de la rue avec des repas sains et équilibrés
       </p>
     </section>
 
     <section class="flex flex-col m-auto p-2">
-      <h2 class="text-xl uppercase text-center pb-4 text-primary">
+      <h2 class="uppercase text-center pb-8 text-primary">
         Et tout ça grâce au soutien et aux dons de nos partenaires !
       </h2>
       <app-partner-card></app-partner-card>

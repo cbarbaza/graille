@@ -4,7 +4,7 @@
       class="image-cropper border border-primary p-1 mb-2"
       [style.background-image]="partnersService.getPartnerLogo(partner.logo)"
     ></div>
-    <h3 class="text-center font-bold text-base">{{ partner.name }}</h3>
+    <h3 class="font-heading text-center font-bold text-base">{{ partner.name }}</h3>
     <p class="text-center">{{ partner.description }}</p>
     <p class="text-center">
       <a *ngFor="let link of partner.links" [href]="link.url"><i class="{{ link.iconName }}"></i></a>
