@@ -18,7 +18,7 @@ export class VimeoComponent implements OnInit {
 
   generateVimeoLink() {
     // return `https://player.vimeo.com/video/${this.vimeoId}?title=0&byline=0&portrait=0`;
-    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://player.vimeo.com/video/${this.vimeoId}?title=0&byline=0&portrait=0`);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(`https://player.vimeo.com/video/${this.vimeoId}?title=0&byline=0&portrait=0&dnt=1`);
   }
 
 }

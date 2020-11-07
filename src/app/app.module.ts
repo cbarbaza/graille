@@ -37,7 +37,9 @@ import { FAQFormComponent } from './admin/admin-faq/faqform/faqform.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NgxGalleryModule } from 'ngx-gallery-9';
+import { GalleryModule } from 'ng-gallery';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -65,6 +67,7 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     NgxGoogleAnalyticsModule.forRoot(environment.googleAnalyticsId),
@@ -80,7 +83,7 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
     }}),
     AngularEditorModule,
     HttpClientModule,
-    NgxGalleryModule,
+    GalleryModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
