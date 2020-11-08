@@ -26,7 +26,20 @@
           <textarea class="input-text" id="description" formControlName="description"></textarea>
 
           <label class="input-label" for="logo"> Logo </label>
-          <input type="file" id="logo" #partnerLogo (change)="onFileSelected($event)" name="logo" autocomplete="off" />
+          <div class="flex flex-row justify-between items-center">
+            <input
+              type="file"
+              id="logo"
+              #partnerLogo
+              (change)="onFileSelected($event)"
+              name="logo"
+              autocomplete="off"
+            />
+            <div
+              class="image-cropper border border-primary p-1 mr-12"
+              [style.background-image]="partnersService.getPartnerLogo(logo)"
+            ></div>
+          </div>
 
           <label class="input-label" for="link"> Site web </label>
           <input class="input-text" id="link" type="text" formControlName="link" />

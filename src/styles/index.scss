@@ -2,6 +2,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@font-face {
+  font-family: PlayfairDisplay;
+  src: url(../assets/font/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
 html,
 body {
   @apply text-secondary;
@@ -19,12 +24,25 @@ a:visited {
   color: black;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading;
+}
+
 h1 {
-  @apply text-18 font-bold text-primary;
+  @apply text-22 font-bold text-primary;
 }
 
 h2 {
-  @apply text-16 font-medium;
+  @apply text-18 font-medium;
+}
+
+h3 {
+  @apply text-16;
 }
 
 .container {

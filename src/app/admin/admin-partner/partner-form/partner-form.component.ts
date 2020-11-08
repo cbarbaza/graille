@@ -5,6 +5,7 @@ import { SimpleModalComponent } from 'ngx-simple-modal';
 import { IPartnerCard, SocialLink } from 'src/app/data/partner-card.interface';
 import { STORAGE_PARTNER_LOGO_PATH } from 'src/app/service/FireBaseConst';
 import { ICON_FACEBOOK, ICON_INSTAGRAM, ICON_LINKEDIN, ICON_WEBSITE } from 'src/app/service/GrailleConst';
+import { PartnerService } from 'src/app/service/partner/partner.service';
 
 @Component({
   selector: 'app-partner-form',
@@ -28,7 +29,9 @@ export class PartnerFormComponent extends SimpleModalComponent<IPartnerCard, IPa
   ref: AngularFireStorageReference;
   task: AngularFireUploadTask;
 
-  constructor(private formBuilder: FormBuilder, private afStorage: AngularFireStorage,) {
+  constructor(private formBuilder: FormBuilder,
+              private afStorage: AngularFireStorage,
+              public partnersService: PartnerService) {
     super();
   }
 

@@ -11,9 +11,7 @@ import { PartnerService } from 'src/app/service/partner/partner.service';
 })
 export class PartnerCardComponent implements OnInit {
 
-  constructor(private sanitizer: DomSanitizer,
-              private partnersService: PartnerService
-            ) { }
+  constructor(public partnersService: PartnerService) { }
 
   public partners: IPartnerCard[] = [];
 
@@ -21,10 +19,5 @@ export class PartnerCardComponent implements OnInit {
     this.partnersService.getPartners().subscribe(partners => this.partners = partners);
   }
 
-  getPartnerLogo(image) {
-    if(image.startsWith('https://firebasestorage.googleapis.com')){
-     return this.sanitizer.bypassSecurityTrustStyle(`url(${image})`);
-    }
-    return this.sanitizer.bypassSecurityTrustStyle(`url(${PATH_PARTNER_LOGO}${image})`);
-  }
+
 }

@@ -13,6 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.1.6",
+    "@angular/cdk": "^10.2.7",
     "@angular/common": "~10.1.6",
     "@angular/compiler": "~10.1.6",
     "@angular/core": "~10.1.6",
@@ -25,6 +26,8 @@
     "@kolkov/angular-editor": "^1.1.4",
     "firebase": "^7.24.0",
     "imagemin-webpack-plugin": "^2.4.2",
+    "ng-gallery": "^5.0.0",
+    "ngx-gallery-9": "^1.0.6",
     "ngx-google-analytics": "^9.0.1",
     "ngx-simple-modal": "^1.4.14",
     "rxjs": "~6.6.3",
