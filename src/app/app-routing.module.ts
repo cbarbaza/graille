@@ -53,9 +53,8 @@ const routes: Routes = [
   { path: 'nos-valeurs', component: NosValeursComponent },
   { path: 'actualite', component: ActualiteComponent },
   { path: 'faq', component: FAQComponent },
-  { path: 'home', component: LandingComponent },
   { path: '', component: LandingComponent },
-  { path: '**', redirectTo: '/home' },
+  { path: '**', redirectTo: '/' },
 ];
 
 @NgModule({
