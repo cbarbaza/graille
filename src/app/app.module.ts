@@ -41,6 +41,8 @@ import { GalleryModule } from 'ng-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareModule } from 'ngx-sharebuttons';
 import { ShareButtonsComponent } from './shared/share-buttons/share-buttons.component';
+import { LaCuisineComponent } from './la-cuisine/la-cuisine.component';
+import { CuisineCardComponent } from './shared/cuisine-card/cuisine-card.component';
 
 
 @NgModule({
@@ -66,6 +68,8 @@ import { ShareButtonsComponent } from './shared/share-buttons/share-buttons.comp
     PartnerFormComponent,
     FAQFormComponent,
     ShareButtonsComponent,
+    LaCuisineComponent,
+    CuisineCardComponent,
 
   ],
   imports: [

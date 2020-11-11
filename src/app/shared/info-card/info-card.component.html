@@ -1,13 +1,9 @@
-<div *ngFor="let card of cards | keyvalue" class="w-full my-4 shadow">
-  <div class="border border-primary bg-white rounded-b flex flex-col justify-between leading-normal">
-    <div>
-      <div class="bg-primary text-gray-100 p-2">
-        <h2 class="text-16 uppercase">
-          {{ card.value.title }}
-          <span class="float-right" [innerHTML]="card.value.titleIcon"></span>
-        </h2>
-      </div>
-      <p class="text-gray-700 text-base p-3 text-justify" [innerHTML]="card.value.text"></p>
-    </div>
+<div *ngFor="let card of cards | keyvalue" class="w-full my-4">
+  <div class="card flex flex-col">
+    <h2 class="uppercase border-b-2 border-primary">
+      {{ card.value.title }}
+      <span class="pr-1 float-right" [innerHTML]="card.value.titleIcon"></span>
+    </h2>
+    <p class="text-12 text-gray-700 py-4 text-justify" [innerHTML]="card.value.text"></p>
   </div>
 </div>

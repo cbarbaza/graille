@@ -11,6 +11,7 @@ import { canActivate, redirectUnauthorizedTo, redirectLoggedInTo } from '@angula
 import { AdminFAQComponent } from './admin/admin-faq/admin-faq.component';
 import { AdminPartnerComponent } from './admin/admin-partner/admin-partner.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { LaCuisineComponent } from './la-cuisine/la-cuisine.component';
 
 
 const routerOptions: ExtraOptions = {
@@ -53,6 +54,7 @@ const routes: Routes = [
   { path: 'nos-valeurs', component: NosValeursComponent },
   { path: 'actualite/:slug', component: ActualiteComponent },
   { path: 'actualite', component: ActualiteComponent },
+  { path: 'deroule-de-la-cuisine', component: LaCuisineComponent },
   { path: 'faq', component: FAQComponent },
   { path: '', component: LandingComponent },
   { path: '**', redirectTo: '/' },
