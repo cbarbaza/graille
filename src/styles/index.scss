@@ -7,6 +7,10 @@
   src: url(../assets/font/PlayfairDisplay-VariableFont_wght.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   @apply text-secondary;

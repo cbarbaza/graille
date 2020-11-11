@@ -39,6 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { GalleryModule } from 'ng-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShareModule } from 'ngx-sharebuttons';
+import { ShareButtonsComponent } from './shared/share-buttons/share-buttons.component';
 
 
 @NgModule({
@@ -63,6 +65,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdminHomeComponent,
     PartnerFormComponent,
     FAQFormComponent,
+    ShareButtonsComponent,
 
   ],
   imports: [
@@ -84,6 +87,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularEditorModule,
     HttpClientModule,
     GalleryModule,
+    ShareModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

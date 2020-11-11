@@ -18,9 +18,8 @@
           <p class="text-10 text-gray-500" [innerHTML]="text"></p>
         </div>
       </div>
-      <div class="text-gray-600">
-        <img [src]="getImage()" [alt]="title" />
-      </div>
+      <img [src]="getImage()" [alt]="title" />
+      <!-- <app-share-buttons [url]="getUrl()" [title]="title" [description]="text" [image]="getImage()"></app-share-buttons> -->
     </div>
   </div>
   <!--line column-->
@@ -62,6 +61,7 @@
         </div>
       </div>
       <img [src]="getImage()" [alt]="title" />
+      <!-- <app-share-buttons [url]="getUrl()" [title]="title" [description]="text" [image]="getImage()"></app-share-buttons> -->
     </div>
   </div>
 </div>

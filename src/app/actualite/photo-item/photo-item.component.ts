@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { BASE_PATH_ACTUALITE } from 'src/app/service/GrailleConst';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-photo-item',
@@ -35,5 +36,10 @@ export class PhotoItemComponent implements OnInit {
   getImage() {
     return `${BASE_PATH_ACTUALITE}${this.imagePath}`;
   }
+
+  getUrl(): string {
+    return `${environment.baseUrl}/${this.slug}`;
+  }
+
 
 }
