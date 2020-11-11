@@ -43,7 +43,7 @@ import { ShareModule } from 'ngx-sharebuttons';
 import { ShareButtonsComponent } from './shared/share-buttons/share-buttons.component';
 import { LaCuisineComponent } from './la-cuisine/la-cuisine.component';
 import { CuisineCardComponent } from './shared/cuisine-card/cuisine-card.component';
-
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -92,6 +92,7 @@ import { CuisineCardComponent } from './shared/cuisine-card/cuisine-card.compone
     HttpClientModule,
     GalleryModule,
     ShareModule,
+    OrderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -29,6 +29,7 @@
     "ng-gallery": "^5.0.0",
     "ngx-gallery-9": "^1.0.6",
     "ngx-google-analytics": "^9.0.1",
+    "ngx-order-pipe": "^2.1.1",
     "ngx-sharebuttons": "^8.0.4",
     "ngx-simple-modal": "^1.4.14",
     "rxjs": "~6.6.3",
