@@ -1,10 +1,18 @@
 .menu {
-    width: 100%;
-    height: 70px;
+  width: 100%;
+  padding: 0px;
+  min-height: 70px;
 
-    .icon {
-        width: auto;
-        height: 100%;
-        margin-left: 15px;
-    }
+  @apply bg-gray-100;
+
+  .icon {
+    width: auto;
+    height: 70px;
+    margin-left: 15px;
+  }
+
+  .cta {
+    @apply m-auto;
+    width: fit-content;
+  }
 }
