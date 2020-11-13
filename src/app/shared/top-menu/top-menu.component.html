@@ -13,7 +13,7 @@
       </svg>
     </button>
   </div>
-  <div [ngClass]="{ hidden: expanded }" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+  <div [ngClass]="{ hidden: !expanded }" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="lg:flex-grow text-center lg:text-left">
       <a
         routerLink=""
