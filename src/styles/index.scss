@@ -109,3 +109,15 @@ h3 {
   @apply border-2 border-primary rounded shadow;
   @apply mx-4 my-4 px-8 py-4;
 }
+
+.button {
+  @apply font-heading text-white font-bold;
+  @apply my-4 py-2 px-4;
+  @apply rounded;
+  @apply bg-primary;
+}
+
+.button:hover {
+  @apply bg-gray-200;
+  @apply text-primary;
+}
