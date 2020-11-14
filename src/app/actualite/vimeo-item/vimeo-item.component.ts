@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-vimeo-item',
@@ -28,6 +29,10 @@ export class VimeoItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getUrl(): string {
+    return `${environment.baseUrl}/${this.slug}`;
   }
 
 }

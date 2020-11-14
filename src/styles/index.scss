@@ -7,6 +7,10 @@
   src: url(../assets/font/PlayfairDisplay-VariableFont_wght.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   @apply text-secondary;
@@ -52,9 +56,13 @@ h3 {
 // utils ***********************
 
 // used to see use fullscreen without footer
-.content-wrapper {
-  min-height: calc(100vh - 70px);
-  max-height: calc(100vh - 70px);
+.border-image {
+  top: 0;
+  max-height: 100vh;
+  min-height: 100vh;
+  @apply rounded-r-sm;
+  @apply sticky;
+  @apply object-cover;
 }
 
 // baseline FROM ************************
@@ -94,4 +102,10 @@ h3 {
 }
 .tooltip:hover .tooltip-text {
   visibility: visible;
+}
+
+// CARD *************************
+.card {
+  @apply border-2 border-primary rounded shadow;
+  @apply mx-4 my-4 px-8 py-4;
 }

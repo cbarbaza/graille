@@ -39,7 +39,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { GalleryModule } from 'ng-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ShareModule } from 'ngx-sharebuttons';
+import { ShareButtonsComponent } from './shared/share-buttons/share-buttons.component';
+import { LaCuisineComponent } from './la-cuisine/la-cuisine.component';
+import { CuisineCardComponent } from './shared/cuisine-card/cuisine-card.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -63,6 +67,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdminHomeComponent,
     PartnerFormComponent,
     FAQFormComponent,
+    ShareButtonsComponent,
+    LaCuisineComponent,
+    CuisineCardComponent,
 
   ],
   imports: [
@@ -84,6 +91,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularEditorModule,
     HttpClientModule,
     GalleryModule,
+    ShareModule,
+    OrderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopMenuComponent implements OnInit {
 
+  expanded =  false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleMenu() {
+    this.expanded = !this.expanded;
   }
 
 }
