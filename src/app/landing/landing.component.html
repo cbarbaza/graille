@@ -1,4 +1,4 @@
-<div class="bg-gray-100">
+<div>
   <div class="w-full">
     <gallery id="headerGallery" autoPlay="true"></gallery>
     <div class="text-center overlap-header">
@@ -40,7 +40,26 @@
     </section>
 
     <section class="px-2 py-4">
-      <img class="m-auto" alt="graille en chiffre" src="assets/images/landing/chiffre.png" />
+      <h2 class="uppercase text-center text-primary text-16">Graille en chiffres</h2>
+      <div class="flex flex-col items-center lg:flex-row lg:justify-between m-auto">
+        <div class="card w-1/2 m-auto lg:w-1/4 font-heading text-16 text-center">
+          <span class="text-20 font-semibold">+{{ countersConfig.numberOfMeal | number }}</span> <br />
+          repas
+        </div>
+
+        <div class="card w-1/2 m-auto lg:w-1/4 font-heading text-16 text-center">
+          <span class="text-20 font-semibold">+{{ countersConfig.numberOfCooker | number }}</span> <br />
+          cuisiner.iers
+        </div>
+
+        <div class="card w-1/2 m-auto lg:w-1/4 font-heading text-16 text-center">
+          <span class="text-20 font-semibold">{{ countersConfig.quantityOfBioWaste | number }} Kg</span>
+          <br />
+          de bio dechets
+        </div>
+      </div>
+
+      <!-- <img class="m-auto" alt="graille en chiffre" src="assets/images/landing/chiffre.png" /> -->
     </section>
 
     <section>

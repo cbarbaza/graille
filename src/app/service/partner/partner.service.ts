@@ -3,7 +3,6 @@ import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { IInfoCard } from 'src/app/data/info-card.interface';
 import { IPartnerCard } from 'src/app/data/partner-card.interface';
 import { DB_NODE_PARTNERS } from '../FireBaseConst';
 import { PATH_PARTNER_LOGO } from '../GrailleConst';
