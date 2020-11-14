@@ -5,4 +5,16 @@
   .icon {
     width: 22px;
   }
+
+  top: 0;
+  max-height: 100vh;
+  min-height: 100vh;
+  @apply rounded-r-sm;
+  @apply sticky;
+  @apply object-cover;
+
+  .button-logout {
+    position: sticky;
+    top: 96.5vh;
+  }
 }

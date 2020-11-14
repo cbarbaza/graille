@@ -1,8 +1,5 @@
-<div class="content-wrapper flex flex-row">
-  <div
-    *ngIf="authService.isLoggedIn"
-    class="left-menu bg-gray-100 border-r-2 border-primary flex flex-col justify-between"
-  >
+<div class="flex flex-row">
+  <div *ngIf="authService.isLoggedIn" class="left-menu bg-gray-100 border-r-2 border-primary">
     <div class="flex flex-col">
       <p class="text-center px-4 py-2 uppercase bg-transparent">Pages</p>
       <p
@@ -20,15 +17,13 @@
         Partenaires
       </p>
     </div>
-    <div>
-      <p
-        (click)="authService.logout()"
-        class="cursor-pointer px-2 pb-2 uppercase bg-transparent hover:text-gray-900 hover:bg-gray-200"
-      >
-        <i class="fas fa-sign-out-alt"></i>
-        Déconnexion
-      </p>
-    </div>
+    <p
+      (click)="authService.logout()"
+      class="button-logout cursor-pointer px-2 pb-2 uppercase bg-transparent hover:text-gray-900 hover:bg-gray-200"
+    >
+      <i class="fas fa-sign-out-alt"></i>
+      Déconnexion
+    </p>
   </div>
 
   <div class="w-full">
