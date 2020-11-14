@@ -9,123 +9,113 @@
       </div>
     </div>
   </div>
-  <div class="container flex flex-col flex-grow">
-    <section class="w-full p-4 flex flew-row">
-      <div class="text-center">
-        <h2 class="text-xl lg:text-2xl uppercase text-center pb-4 text-primary">Graille c'est quoi ?</h2>
-        <p class="pb-2 px-4 text-justify text-center">
-          Graille, c’est une équipe citoyenne faite de cuistot.es des quatre coins de Lyon. Nous organisons des cuisines
-          mobiles et éphémères, on va de squat en camp, en passant par la rue. Les brigades sont constituées d’avec et
-          sans abris, menées par des chef.fes expérimenté.es, les repas préparés avec les invendus de nos supers
-          partenaires, des commerçants locaux, solidaires et responsables.
-        </p>
-        <p class="pb-2 px-4 text-justify text-center">
-          Parce qu’à Graille, on entreprend une démarche éco-responsable. On collabore avec des enseignes zéro déchet,
-          encourageant le vrac, les fruits et légumes issus d'une agriculture biologique ou responsable. On composte nos
-          déchets, on se déplace autant que possible à vélo. C’est d’ailleurs en selle qu’à la fin des cuisines on part
-          distribuer nos repas aux potos de la rue. On encourage le lien social, la rencontre, la diversité, le faire
-          ensemble : que du love !
-        </p>
+
+  <section class="container py-8 text-center">
+    <h2 class="landing-title text-center">Graille c'est quoi ?</h2>
+    <p class="pb-2 px-4 text-justify">
+      Graille, c’est une équipe citoyenne faite de cuistot.es des quatre coins de Lyon. Nous organisons des cuisines
+      mobiles et éphémères, on va de squat en camp, en passant par la rue. Les brigades sont constituées d’avec et sans
+      abris, menées par des chef.fes expérimenté.es, les repas préparés avec les invendus de nos supers partenaires, des
+      commerçants locaux, solidaires et responsables.
+    </p>
+    <p class="pb-2 px-4 text-justify">
+      Parce qu’à Graille, on entreprend une démarche éco-responsable. On collabore avec des enseignes zéro déchet,
+      encourageant le vrac, les fruits et légumes issus d'une agriculture biologique ou responsable. On composte nos
+      déchets, on se déplace autant que possible à vélo. C’est d’ailleurs en selle qu’à la fin des cuisines on part
+      distribuer nos repas aux potos de la rue. On encourage le lien social, la rencontre, la diversité, le faire
+      ensemble : que du love !
+    </p>
+    <p class="italic py-6">
+      Nous sommes seulement à Lyon pour le moment, on attend que des supers citoyen.nes engagé.es le lancent dans
+      d'autres ville, pays, planètes ! 🚀
+    </p>
+    <div>
+      <button routerLink="/nos-valeurs" class="button m-4">Nos valeurs</button>
+      <button routerLink="/deroule-de-la-cuisine" class="button m-4">Les cuisines</button>
+      <button routerLink="/faq" class="button m-4">FAQ</button>
+    </div>
+  </section>
+
+  <section class="container pb-8">
+    <h2 class="landing-title">Graille en chiffres</h2>
+    <div class="flex flex-col items-center lg:flex-row lg:justify-between m-auto">
+      <div class="counter card w-1/2 lg:w-1/4">
+        <span>+{{ countersConfig.numberOfMeal | number }}</span> <br />
+        repas
+      </div>
+
+      <div class="counter card w-1/2 lg:w-1/4">
+        <span>+{{ countersConfig.numberOfCooker | number }}</span> <br />
+        cuisiner.iers
+      </div>
+
+      <div class="counter card w-1/2 lg:w-1/4">
+        <span>{{ countersConfig.quantityOfBioWaste | number }} Kg</span>
         <br />
-        <p class="italic">
-          Nous sommes seulement à Lyon pour le moment, on attend que des supers citoyen.nes engagé.es le lancent dans
-          d'autres ville, pays, planètes ! 🚀
-        </p>
-        <div>
-          <button routerLink="/nos-valeurs" class="button m-4">Nos valeurs</button>
-          <button routerLink="/deroule-de-la-cuisine" class="button m-4">Les cuisines</button>
-          <button routerLink="/faq" class="button m-4">FAQ</button>
+        de bio dechets
+      </div>
+    </div>
+  </section>
+
+  <section class="container pb-8">
+    <h2 class="landing-title text-12 lg:text-16">Tu veux soutenir une cause sociale et environnementale ?</h2>
+    <div class="card">
+      <div
+        class="grid lg:grid-cols-4 lg:grid-rows-1 lg:divide-x lg:divide-y-0 grid-cols-1 grid-rows-4 divide-y divide-gray-400 divide-dashed"
+      >
+        <!-- Donner des invendus ******************************************************************************************************* -->
+        <div class="text-center p-2 flex flex-col justify-between">
+          <h3 class="uppercase pb-2 font-medium text-semibold text-12">Donner des invendus</h3>
+          <div class="action-content">
+            <p>Tu es professionel de l'alimentation et tu as des invendus qui partent à la poubelle ?</p>
+            <p>Rempli le formulaire et on arrive la ou ca t'arrange !</p>
+          </div>
+          <a href="https://allan371132.typeform.com/to/ZOv3znQW" target="_blank">
+            <button class="button">J'ai des invendus !</button>
+          </a>
+        </div>
+        <!-- DON DE BOCAUX ************************************************************************************************************ -->
+        <div class="text-center p-2 flex flex-col justify-between">
+          <h3 class="uppercase pb-2 font-medium text-12">Faire un don de bocaux</h3>
+          <div class="action-content">
+            <p>
+              Les repas préparé avec amour lors de cuisine sont ensuite mis en bocaux pour livrer aux bénéficiaires.
+            </p>
+          </div>
+          <a href="https://allan371132.typeform.com/to/Fr3gbW25" target="_blank">
+            <button class="button">Je donne mes bocaux !</button>
+          </a>
+        </div>
+        <!-- Participer au cuisine ******************************************************************************************************* -->
+        <div class="text-center p-2 flex flex-col justify-between">
+          <h3 class="uppercase pb-2 font-medium text-semibold text-12">Participer au cuisine</h3>
+          <div class="action-content">
+            <p>Les sessions de cuisine sont ouvertes à tous ! Petit comme grand vous pouvez venir en famille !</p>
+          </div>
+          <a href="https://calendly.com/graille_lyon/cuisinerr?month=2020-11" target="_blank">
+            <button class="button">Je m'inscrit pour une cuisine</button>
+          </a>
+        </div>
+        <!-- Participer au cuisine ******************************************************************************************************* -->
+        <div class="text-center p-2 flex flex-col justify-between">
+          <h3 class="uppercase pb-2 font-medium text-semibold text-12">Faire un don</h3>
+          <div class="action-content">
+            <p>Graille à besoin de materiel pour cuisiner et entretenir le matériel.</p>
+            <p>
+              Fais un don <span class="italic text-8">(déductible à 75% des impots)</span> et on t'envoie plus d'amour
+              pour ton soutien!
+            </p>
+          </div>
+          <a href="https://www.helloasso.com/associations/rise-homeless-giving/formulaires/3" target="_blank">
+            <button class="button">Je fais un don !</button>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="px-2 py-4">
-      <h2 class="uppercase text-center text-primary text-16">Graille en chiffres</h2>
-      <div class="flex flex-col items-center lg:flex-row lg:justify-between m-auto">
-        <div class="card w-1/2 m-auto lg:w-1/4 font-heading text-16 text-center">
-          <span class="text-20 font-semibold">+{{ countersConfig.numberOfMeal | number }}</span> <br />
-          repas
-        </div>
-
-        <div class="card w-1/2 m-auto lg:w-1/4 font-heading text-16 text-center">
-          <span class="text-20 font-semibold">+{{ countersConfig.numberOfCooker | number }}</span> <br />
-          cuisiner.iers
-        </div>
-
-        <div class="card w-1/2 m-auto lg:w-1/4 font-heading text-16 text-center">
-          <span class="text-20 font-semibold">{{ countersConfig.quantityOfBioWaste | number }} Kg</span>
-          <br />
-          de bio dechets
-        </div>
-      </div>
-
-      <!-- <img class="m-auto" alt="graille en chiffre" src="assets/images/landing/chiffre.png" /> -->
-    </section>
-
-    <section>
-      <h2 class="uppercase text-center text-primary text-12 lg:text-16">
-        Tu veux soutenir une cause sociale et environnementale ?
-      </h2>
-      <div class="card">
-        <div
-          class="grid lg:grid-cols-4 lg:grid-rows-1 lg:divide-x lg:divide-y-0 grid-cols-1 grid-rows-4 divide-y divide-gray-400 divide-dashed"
-        >
-          <!-- Donner des invendus ******************************************************************************************************* -->
-          <div class="text-center p-2 flex flex-col justify-between">
-            <h3 class="uppercase pb-2 font-medium text-semibold text-12">Donner des invendus</h3>
-            <div class="action-content">
-              <p>Tu es professionel de l'alimentation et tu as des invendus qui partent à la poubelle ?</p>
-              <p>Rempli le formulaire et on arrive la ou ca t'arrange !</p>
-            </div>
-            <a href="https://allan371132.typeform.com/to/ZOv3znQW" target="_blank">
-              <button class="button">J'ai des invendus !</button>
-            </a>
-          </div>
-          <!-- DON DE BOCAUX ************************************************************************************************************ -->
-          <div class="text-center p-2 flex flex-col justify-between">
-            <h3 class="uppercase pb-2 font-medium text-12">Faire un don de bocaux</h3>
-            <div class="action-content">
-              <p>
-                Les repas préparé avec amour lors de cuisine sont ensuite mis en bocaux pour livrer aux bénéficiaires.
-              </p>
-            </div>
-            <a href="https://allan371132.typeform.com/to/Fr3gbW25" target="_blank">
-              <button class="button">Je donne mes bocaux !</button>
-            </a>
-          </div>
-          <!-- Participer au cuisine ******************************************************************************************************* -->
-          <div class="text-center p-2 flex flex-col justify-between">
-            <h3 class="uppercase pb-2 font-medium text-semibold text-12">Participer au cuisine</h3>
-            <div class="action-content">
-              <p>Les sessions de cuisine sont ouvertes à tous ! Petit comme grand vous pouvez venir en famille !</p>
-            </div>
-            <a href="https://calendly.com/graille_lyon/cuisinerr?month=2020-11" target="_blank">
-              <button class="button">Je m'inscrit pour une cuisine</button>
-            </a>
-          </div>
-          <!-- Participer au cuisine ******************************************************************************************************* -->
-          <div class="text-center p-2 flex flex-col justify-between">
-            <h3 class="uppercase pb-2 font-medium text-semibold text-12">Faire un don</h3>
-            <div class="action-content">
-              <p>Graille à besoin de materiel pour cuisiner et entretenir le matériel.</p>
-              <p>
-                Fais un don <span class="italic text-8">(déductible à 75% des impots)</span> et on t'envoie plus d'amour
-                pour ton soutien!
-              </p>
-            </div>
-            <a href="https://www.helloasso.com/associations/rise-homeless-giving/formulaires/3" target="_blank">
-              <button class="button">Je fais un don !</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="flex flex-col m-auto p-2">
-      <h2 class="uppercase text-center pb-8 text-primary">
-        Et tout ça grâce au soutien et aux dons de nos partenaires !
-      </h2>
-      <app-partner-card></app-partner-card>
-    </section>
-  </div>
+  <section class="container flex flex-col pb-8">
+    <h2 class="landing-title">Et tout ça grâce au soutien et aux dons de nos partenaires !</h2>
+    <app-partner-card></app-partner-card>
+  </section>
 </div>

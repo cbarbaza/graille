@@ -29,3 +29,16 @@
   flex-basis: auto;
   margin-bottom: 1rem;
 }
+
+.counter {
+  @apply m-auto;
+  @apply font-heading text-16 text-center;
+
+  span {
+    @apply text-20 font-semibold;
+  }
+}
+
+.landing-title {
+  @apply uppercase text-center pb-4 text-primary;
+}
