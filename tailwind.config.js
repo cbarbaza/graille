@@ -19,6 +19,8 @@ module.exports = {
       sans: ['Roboto', 'system-ui', 'BlinkMacSystemFont', '-apple-system', 'Segoe UI', 'sans-serif'],
     },
     fontSize: {
+      6: '0.6rem',
+      8: '0.8rem',
       10: '1rem',
       12: '1.2rem',
       14: '1.4rem',

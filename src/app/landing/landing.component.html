@@ -32,24 +32,9 @@
           d'autres ville, pays, planètes ! 🚀
         </p>
         <div>
-          <button
-            routerLink="/nos-valeurs"
-            class="font-heading bg-primary hover:bg-gray-200 hover:text-primary text-white font-bold m-4 py-2 px-4 rounded"
-          >
-            Nos valeurs
-          </button>
-          <button
-            routerLink="/actualite"
-            class="font-heading bg-primary hover:bg-gray-200 hover:text-primary text-white font-bold m-4 py-2 px-4 rounded"
-          >
-            L'actualité
-          </button>
-          <button
-            routerLink="/faq"
-            class="font-heading bg-primary hover:bg-gray-200 hover:text-primary text-white font-bold m-4 py-2 px-4 rounded"
-          >
-            FAQ
-          </button>
+          <button routerLink="/nos-valeurs" class="button m-4">Nos valeurs</button>
+          <button routerLink="/deroule-de-la-cuisine" class="button m-4">Les cuisines</button>
+          <button routerLink="/faq" class="button m-4">FAQ</button>
         </div>
       </div>
     </section>
@@ -58,23 +43,63 @@
       <img class="m-auto" alt="graille en chiffre" src="assets/images/landing/chiffre.png" />
     </section>
 
-    <section class="text-center mx-auto my-4 py-4 lg:w-4/5 w-full border border-primary rounded-lg shadow-lg">
-      <h2 class="uppercase text-center pb-4 text-primary text-12 lg:text-16">
+    <section>
+      <h2 class="uppercase text-center text-primary text-12 lg:text-16">
         Tu veux soutenir une cause sociale et environnementale ?
       </h2>
-      <p class="text-center text-gray-600">Offrir des bocaux, participer aux cuisines ou faire un don ?</p>
-      <a href="https://linktr.ee/graillelyon" target="_blank">
-        <button
-          class="font-heading bg-primary hover:bg-gray-200 hover:text-primary text-white font-bold my-4 py-2 px-4 rounded"
+      <div class="card">
+        <div
+          class="grid lg:grid-cols-4 lg:grid-rows-1 lg:divide-x lg:divide-y-0 grid-cols-1 grid-rows-4 divide-y divide-gray-400 divide-dashed"
         >
-          <i class="p-1 fas fa-hand-peace"></i>
-          Je soutiens Graille !
-          <i class="p-1 fas fa-hand-peace"></i>
-        </button>
-      </a>
-      <p class="text-center text-gray-600">
-        Graille a besoin de vous pour régaler les potos de la rue avec des repas sains et équilibrés
-      </p>
+          <!-- Donner des invendus ******************************************************************************************************* -->
+          <div class="text-center p-2 flex flex-col justify-between">
+            <h3 class="uppercase pb-2 font-medium text-semibold text-12">Donner des invendus</h3>
+            <div class="action-content">
+              <p>Tu es professionel de l'alimentation et tu as des invendus qui partent à la poubelle ?</p>
+              <p>Rempli le formulaire et on arrive la ou ca t'arrange !</p>
+            </div>
+            <a href="https://allan371132.typeform.com/to/ZOv3znQW" target="_blank">
+              <button class="button">J'ai des invendus !</button>
+            </a>
+          </div>
+          <!-- DON DE BOCAUX ************************************************************************************************************ -->
+          <div class="text-center p-2 flex flex-col justify-between">
+            <h3 class="uppercase pb-2 font-medium text-12">Faire un don de bocaux</h3>
+            <div class="action-content">
+              <p>
+                Les repas préparé avec amour lors de cuisine sont ensuite mis en bocaux pour livrer aux bénéficiaires.
+              </p>
+            </div>
+            <a href="https://allan371132.typeform.com/to/Fr3gbW25" target="_blank">
+              <button class="button">Je donne mes bocaux !</button>
+            </a>
+          </div>
+          <!-- Participer au cuisine ******************************************************************************************************* -->
+          <div class="text-center p-2 flex flex-col justify-between">
+            <h3 class="uppercase pb-2 font-medium text-semibold text-12">Participer au cuisine</h3>
+            <div class="action-content">
+              <p>Les sessions de cuisine sont ouvertes à tous ! Petit comme grand vous pouvez venir en famille !</p>
+            </div>
+            <a href="https://calendly.com/graille_lyon/cuisinerr?month=2020-11" target="_blank">
+              <button class="button">Je m'inscrit pour une cuisine</button>
+            </a>
+          </div>
+          <!-- Participer au cuisine ******************************************************************************************************* -->
+          <div class="text-center p-2 flex flex-col justify-between">
+            <h3 class="uppercase pb-2 font-medium text-semibold text-12">Faire un don</h3>
+            <div class="action-content">
+              <p>Graille à besoin de materiel pour cuisiner et entretenir le matériel.</p>
+              <p>
+                Fais un don <span class="italic text-8">(déductible à 75% des impots)</span> et on t'envoie plus d'amour
+                pour ton soutien!
+              </p>
+            </div>
+            <a href="https://www.helloasso.com/associations/rise-homeless-giving/formulaires/3" target="_blank">
+              <button class="button">Je fais un don !</button>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="flex flex-col m-auto p-2">

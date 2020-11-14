@@ -53,7 +53,7 @@ const routes: Routes = [
   { path:  'admin', component: AdminComponent, children: adminChildren },
   { path: 'nos-valeurs', component: NosValeursComponent },
   { path: 'actualite/:slug', component: ActualiteComponent },
-  { path: 'actualite', component: ActualiteComponent },
+  // { path: 'actualite', component: ActualiteComponent },
   { path: 'deroule-de-la-cuisine', component: LaCuisineComponent },
   { path: 'faq', component: FAQComponent },
   { path: '', component: LandingComponent },
