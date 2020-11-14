@@ -50,6 +50,10 @@ h3 {
   @apply text-16;
 }
 
+p {
+  @apply text-12;
+}
+
 .container {
   @apply mx-auto px-12 w-full max-w-screen-xl;
 }
