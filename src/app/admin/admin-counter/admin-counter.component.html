@@ -1,0 +1,28 @@
+<div class="h-full -my-2 py-2 overflow-x-auto">
+  <div class="px-8 pt-8 flex flex-row justify-between">
+    <h1>Liste des compteurs</h1>
+  </div>
+  <section class="container pb-8">
+    <form [formGroup]="countersForm" (ngSubmit)="apply(countersForm.value)">
+      <div class="flex flex-col items-center lg:flex-row lg:justify-between m-auto">
+        <div class="counter card w-full lg:w-1/4">
+          <input class="input-text" id="numberOfMeal" type="number" formControlName="numberOfMeal" />
+          repas
+        </div>
+
+        <div class="counter card w-full lg:w-1/4">
+          <input class="input-text" id="numberOfCooker" type="number" formControlName="numberOfCooker" />
+          cuisiner.iers
+        </div>
+
+        <div class="counter card w-full lg:w-1/4">
+          <input class="input-text" id="quantityOfBioWaste" type="number" formControlName="quantityOfBioWaste" />
+          de bio dechets
+        </div>
+      </div>
+      <div class="w-full text-center">
+        <button class="button-submit" type="submit">Enregister</button>
+      </div>
+    </form>
+  </section>
+</div>

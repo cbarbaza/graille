@@ -1,7 +1,14 @@
 <div class="flex flex-row">
-  <div *ngIf="authService.isLoggedIn" class="left-menu bg-gray-100 border-r-2 border-primary">
-    <div class="flex flex-col">
+  <div *ngIf="authService.isLoggedIn" class="left-menu">
+    <div class="link flex flex-col">
       <p class="text-center px-4 py-2 uppercase bg-transparent">Pages</p>
+      <p
+        routerLink="/admin/counter"
+        class="cursor-pointer px-4 py-2 uppercase bg-transparent hover:text-gray-900 hover:bg-gray-200"
+      >
+        <i class="fas fa-chart-line"></i>
+        Compteurs
+      </p>
       <p
         routerLink="/admin/faq"
         class="cursor-pointer px-4 py-2 uppercase bg-transparent hover:text-gray-900 hover:bg-gray-200"

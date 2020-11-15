@@ -43,7 +43,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
 
     this.remoteConfigService.getCounters().subscribe(res => {
-      console.log(res);
       this.countersConfig = res;});
   }
 

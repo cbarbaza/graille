@@ -44,6 +44,7 @@ import { ShareButtonsComponent } from './shared/share-buttons/share-buttons.comp
 import { LaCuisineComponent } from './la-cuisine/la-cuisine.component';
 import { CuisineCardComponent } from './shared/cuisine-card/cuisine-card.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { AdminCounterComponent } from './admin/admin-counter/admin-counter.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { OrderModule } from 'ngx-order-pipe';
     ShareButtonsComponent,
     LaCuisineComponent,
     CuisineCardComponent,
+    AdminCounterComponent,
 
   ],
   imports: [

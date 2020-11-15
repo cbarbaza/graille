@@ -1,17 +1,19 @@
 .left-menu {
-  width: 180px;
-  min-height: 100%;
-
-  .icon {
-    width: 22px;
-  }
+  @apply sticky;
+  @apply bg-gray-100;
+  @apply border-r-2 border-primary rounded-r-sm;
 
   top: 0;
   max-height: 100vh;
   min-height: 100vh;
-  @apply rounded-r-sm;
-  @apply sticky;
-  @apply object-cover;
+
+  .link {
+    width: max-content;
+  }
+
+  .icon {
+    width: 22px;
+  }
 
   .button-logout {
     position: sticky;

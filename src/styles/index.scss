@@ -115,6 +115,7 @@ p {
   @apply mx-4 my-4 px-8 py-4;
 }
 
+// BUTTON ************************************
 .button {
   @apply font-heading text-white font-bold;
   @apply my-4 py-2 px-4;
@@ -125,4 +126,16 @@ p {
 .button:hover {
   @apply bg-gray-200;
   @apply text-primary;
+}
+
+.button-submit {
+  width: fit-content;
+  transition: all 0.15s ease;
+  @apply bg-green-500 text-white;
+  @apply font-bold uppercase  rounded shadow;
+  @apply px-6 py-3;
+}
+
+.button-submit:hover {
+  @apply shadow-lg outline-none bg-green-600;
 }

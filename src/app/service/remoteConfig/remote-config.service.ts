@@ -15,4 +15,8 @@ export class RemoteConfigService {
   getCounters(){
     return this.db.object<IRemoteConfigCounters>(`${DB_NODE_REMOTE_CONFIG}/${DB_CONFIG_KEY_COUNTERS}`).valueChanges();
   }
+
+  saveCouters(value: IRemoteConfigCounters){
+     this.db.list(DB_NODE_REMOTE_CONFIG).update(DB_CONFIG_KEY_COUNTERS, value);
+  }
 }

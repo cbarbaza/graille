@@ -1,0 +1,12 @@
+.counter {
+  @apply mx-auto my-3;
+  @apply font-heading text-16 text-center;
+
+  span {
+    @apply text-20 font-semibold;
+  }
+}
+
+.input-text {
+  @apply text-center;
+}

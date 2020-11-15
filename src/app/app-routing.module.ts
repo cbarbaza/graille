@@ -12,6 +12,7 @@ import { AdminFAQComponent } from './admin/admin-faq/admin-faq.component';
 import { AdminPartnerComponent } from './admin/admin-partner/admin-partner.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { LaCuisineComponent } from './la-cuisine/la-cuisine.component';
+import { AdminCounterComponent } from './admin/admin-counter/admin-counter.component';
 
 
 const routerOptions: ExtraOptions = {
@@ -44,6 +45,11 @@ const adminChildren = [
   {
     path: 'partners',
     component: AdminPartnerComponent,
+    ...canActivate(redirectUnauthorizedToLogin),
+  },
+  {
+    path: 'counter',
+    component: AdminCounterComponent,
     ...canActivate(redirectUnauthorizedToLogin),
   },
   { path: '**', redirectTo: '/admin/home' },
