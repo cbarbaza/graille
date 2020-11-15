@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Gallery, GalleryConfig, GalleryItem, ImageItem } from 'ng-gallery';
+import { initialRemoteConfigCounters, IRemoteConfigCounters } from '../data/remote-config-counters.interface';
 import { RemoteConfigService } from '../service/remoteConfig/remote-config.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
   };
 
   galleryRef;
-  countersConfig = {};
+  countersConfig: IRemoteConfigCounters = initialRemoteConfigCounters;
 
   constructor(private gallery: Gallery, private remoteConfigService: RemoteConfigService) { }
 
