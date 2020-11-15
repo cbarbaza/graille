@@ -55,21 +55,8 @@
         </div>
         <!--footer-->
         <div class="flex items-center justify-end p-6 border-t border-solid border-gray-300 rounded-b">
-          <button
-            class="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1"
-            type="button"
-            style="transition: all 0.15s ease"
-            (click)="close()"
-          >
-            Annuler
-          </button>
-          <button
-            class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-            type="submit"
-            style="transition: all 0.15s ease"
-          >
-            Enregistrer
-          </button>
+          <button class="button-cancel" type="button" (click)="close()">Annuler</button>
+          <button class="button-submit" type="submit">Enregistrer</button>
         </div>
       </form>
     </div>

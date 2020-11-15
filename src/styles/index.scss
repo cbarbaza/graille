@@ -139,3 +139,10 @@ p {
 .button-submit:hover {
   @apply shadow-lg outline-none bg-green-600;
 }
+
+.button-cancel {
+  width: fit-content;
+  transition: all 0.15s ease;
+  @apply text-red-500 font-bold uppercase;
+  @apply px-6 py-2 outline-none;
+}
