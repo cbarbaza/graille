@@ -27,6 +27,8 @@ export class PartnerService {
 
 
   getPartnerLogo(image) {
+    if(!image) {return;}
+
     if(image.startsWith('https://firebasestorage.googleapis.com')){
      return this.sanitizer.bypassSecurityTrustStyle(`url(${image})`);
     }
